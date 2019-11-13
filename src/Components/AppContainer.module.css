@@ -1,0 +1,8 @@
+.mobileView{
+    display: inline-grid;
+    /* color: brown; */
+}
+.desktopView{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}

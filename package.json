@@ -6,6 +6,7 @@
     "gitignore": "^0.6.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-responsive": "^8.0.1",
     "react-scripts": "3.2.0"
   },
   "scripts": {
