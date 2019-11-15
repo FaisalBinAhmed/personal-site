@@ -1,14 +1,24 @@
 import React from 'react';
+import './AboutMe.module.scss';
+import Typography from '../Typography';
+
 
 let styles = {
-    backgroundColor: '#FDF6E3',
+    backgroundColor: '#FFF',
 }
 
 function AboutMe(props){
 
     return(
         <div style={styles}>
-    <h1>About Me</h1></div>
+            <Typography fs={'4rem'}>Hi, my name is Faisal. 👋</Typography>
+            {/* <p className='sample'>jwvhjwkvbwkj</p> */}
+    
+    
+    
+    
+    </div>
+    
     );
 }
 

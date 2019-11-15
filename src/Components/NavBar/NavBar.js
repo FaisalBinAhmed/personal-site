@@ -1,14 +1,16 @@
 import React from 'react';
-import Buttons from './Button';
-import './NavBar.css';
+import Buttons from '../Common/Button';
+import Profile from '../Profile/Profile';
+import './NavBar.scss';
 const Navbar = (props) => {
 
     let styles = {
         display: 'block',
-        backgroundColor:  '#42A5F5',
-        // color: 'blue',
+        backgroundColor:  '#F7F7F7',
+        color: '#c9d1d3',
         height: '100vh',
-        width: '',
+        
+        
     };
 
 if(props.orient==='portrait'){
@@ -19,17 +21,16 @@ if(props.orient==='portrait'){
 
     return (
         <div style={styles}>
-                <h1>
-                    This is Faisal Ahmed.
-                </h1>
-            <Buttons 
-            
-            title="About me"
-            
-            
-            
-            />
-            </div>
+                
+                <div className='menu'>
+                        <Buttons 
+                        title="Home"/>
+                        <Buttons 
+                        title="About Me"/>
+                        <hr/>
+        
+                </div>
+        </div>
     
     );
 
