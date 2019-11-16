@@ -1,8 +1,8 @@
 import React from 'react';
 import faisal from '../../Assets/faisal.jpeg';
-import styles from './Profile.module.scss'
+import styles from './About.module.scss'
 
-const Profile = (props) => {
+const About = (props) => {
     // <h1>Welcome to my website</h1>
     return(<img 
         src={faisal} 
@@ -17,4 +17,4 @@ const Profile = (props) => {
         );
 }
 
-export default Profile;
+export default About;

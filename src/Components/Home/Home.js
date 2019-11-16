@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutMe.module.scss';
+import './Home.module.scss';
 import Typography from '../Typography';
 
 
