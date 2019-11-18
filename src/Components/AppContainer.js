@@ -5,9 +5,11 @@ import {HashRouter, Switch, Route, NavLink} from 'react-router-dom';
 import styles from './AppContainer.module.scss';
 import Buttons from './Common/Button';
 import BadLink from './BadLink';
+import useTheme from './Hooks/useTheming';
+
 const AppContainer = (props) => {
 
-    console.log(styles);
+const[theme, changeTheme] = useTheme();
 
     let style=styles;
     
@@ -33,7 +35,7 @@ const AppContainer = (props) => {
 
     let navstyles = {
         display: 'block',
-        backgroundColor:  '#F7F7F7',
+        backgroundColor:  theme==='light'? '#F7F7F7': 'Black' ,
         color: '#c9d1d3',
         height: '100vh',
         
@@ -56,13 +58,16 @@ const AppContainer = (props) => {
 
 }
 
+
     
 
 return(
     <HashRouter>
     <div className={style}>
         {/* Menubar on the left */}
-        <div style={navstyles}> 
+        
+        <div style={navstyles}>
+            <button onClick={changeTheme}>change</button> 
             {/* actual menus */}
             <div style={menustyles}> 
 
