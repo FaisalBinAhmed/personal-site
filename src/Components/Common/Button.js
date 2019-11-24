@@ -1,14 +1,7 @@
-import React from 'react';
-import './Button.scss';
+import React from "react";
+import "./Button.scss";
 
 const Button = (props) => {
-
-    return(
-
-        <button className='buttons'>{props.title}</button>
-
-    );
-
-
-}
+	return <button className="buttons">{props.title}</button>;
+};
 export default Button;

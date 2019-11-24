@@ -1,17 +1,12 @@
-import React from 'react';
-
-
+import React from "react";
 
 const Typography = (props) => {
+	const styles = {
+		fontSize: props.fs,
+		fontFamily: "Trebuchet MS"
+	};
 
-    const styles = {
-        fontSize: props.fs,
-        fontFamily: 'Trebuchet MS',
-    };
-
-    return(
-        <p style={styles}>{props.children}</p>
-    );
-}
+	return <p style={styles}>{props.children}</p>;
+};
 
 export default Typography;
