@@ -54,7 +54,8 @@ const AppContainer = (props) => {
 	let containerStyle = {
 		backgroundColor: theme === "light" ? "#FFF" : "#121212",
 		color: theme === "light" ? "#121212" : "#F7F7F7",
-		height: "100vh"
+		height: "100vh",
+		overflow: "auto"
 	};
 	//* MENUS
 	const linkstyles = {

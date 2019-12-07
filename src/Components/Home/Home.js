@@ -6,17 +6,18 @@ import twitter from "../../Assets/twitter.png";
 import linkedin from "../../Assets/linkedin.png";
 import medium from "../../Assets/medium.png";
 import styles from "./Home.module.scss";
-
+import { Link } from "react-router-dom";
 const mainstyles = {
-	marginLeft: "5rem",
-	marginRight: "5rem"
+	marginLeft: "5%",
+	marginRight: "5%",
+	marginTop: "5%"
 };
 const socialStyles = styles.social;
 
 function AboutMe(props) {
 	return (
 		<div style={mainstyles}>
-			<Typography fs={"4rem"} ff={"monospace"} ta={"left"}>
+			<Typography fs={"3rem"} ff={"monospace"} ta={"left"}>
 				Hi, my name is Faisal. 👋
 			</Typography>
 			<Typography fs={"1.5rem"} ta={"justify"}>
@@ -26,7 +27,7 @@ function AboutMe(props) {
 				I'm currently studying Master's of Informatics at Technical University
 				of Munich. I'm also working part-time as a front-end developer at Joyn
 				GmbH. If you want to know more about me, head over to my{" "}
-				<a href="https://faisalb.in/about">"about"</a> page.
+				<Link to="/about">"About Me"</Link> page.
 			</Typography>
 			<Typography fs={"1.5rem"} ta={"justify"}>
 				Don't forget to follow me on social sites:
