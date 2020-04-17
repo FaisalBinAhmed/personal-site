@@ -1,7 +1,7 @@
 {
 	"name": "personal-site",
 	"version": "0.1.0",
-	"private": true,
+	"private": false,
 	"homepage": "www.faisalbin.com",
 	"dependencies": {
 		"gh-pages": "^2.2.0",
