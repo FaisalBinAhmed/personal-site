@@ -2,7 +2,7 @@
 	"name": "personal-site",
 	"version": "0.1.0",
 	"private": false,
-	"homepage": "http://faisalbinahmed.github.io/personal-site",
+	"homepage": "https://www.faisalbin.com",
 	"dependencies": {
 		"gh-pages": "^2.2.0",
 		"gitignore": "^0.6.0",
@@ -17,7 +17,7 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build",
+		"deploy": "gh-pages -b master -d build",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
