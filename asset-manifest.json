@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/personal-site/static/css/main.10d77619.chunk.css",
-    "main.js": "/personal-site/static/js/main.cb69ba44.chunk.js",
-    "main.js.map": "/personal-site/static/js/main.cb69ba44.chunk.js.map",
-    "runtime-main.js": "/personal-site/static/js/runtime-main.ad9951cb.js",
-    "runtime-main.js.map": "/personal-site/static/js/runtime-main.ad9951cb.js.map",
-    "static/css/2.6d770dec.chunk.css": "/personal-site/static/css/2.6d770dec.chunk.css",
-    "static/js/2.8722601a.chunk.js": "/personal-site/static/js/2.8722601a.chunk.js",
-    "static/js/2.8722601a.chunk.js.map": "/personal-site/static/js/2.8722601a.chunk.js.map",
-    "index.html": "/personal-site/index.html",
-    "precache-manifest.ccdc24956c028a38870319af8c7f6023.js": "/personal-site/precache-manifest.ccdc24956c028a38870319af8c7f6023.js",
-    "service-worker.js": "/personal-site/service-worker.js",
-    "static/css/2.6d770dec.chunk.css.map": "/personal-site/static/css/2.6d770dec.chunk.css.map",
-    "static/css/main.10d77619.chunk.css.map": "/personal-site/static/css/main.10d77619.chunk.css.map",
-    "static/media/faisal.jpeg": "/personal-site/static/media/faisal.5b2a4d04.jpeg",
-    "static/media/index.css": "/personal-site/static/media/roboto-latin-900italic.ebf6d164.woff2"
+    "main.css": "/static/css/main.10d77619.chunk.css",
+    "main.js": "/static/js/main.33044812.chunk.js",
+    "main.js.map": "/static/js/main.33044812.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c3c48b9e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c3c48b9e.js.map",
+    "static/css/2.8271af8e.chunk.css": "/static/css/2.8271af8e.chunk.css",
+    "static/js/2.d8db4059.chunk.js": "/static/js/2.d8db4059.chunk.js",
+    "static/js/2.d8db4059.chunk.js.map": "/static/js/2.d8db4059.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d15debf5d0e17a553343bf463d33d7e2.js": "/precache-manifest.d15debf5d0e17a553343bf463d33d7e2.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.8271af8e.chunk.css.map": "/static/css/2.8271af8e.chunk.css.map",
+    "static/css/main.10d77619.chunk.css.map": "/static/css/main.10d77619.chunk.css.map",
+    "static/media/faisal.jpeg": "/static/media/faisal.5b2a4d04.jpeg",
+    "static/media/index.css": "/static/media/roboto-latin-900italic.ebf6d164.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.ad9951cb.js",
-    "static/css/2.6d770dec.chunk.css",
-    "static/js/2.8722601a.chunk.js",
+    "static/js/runtime-main.c3c48b9e.js",
+    "static/css/2.8271af8e.chunk.css",
+    "static/js/2.d8db4059.chunk.js",
     "static/css/main.10d77619.chunk.css",
-    "static/js/main.cb69ba44.chunk.js"
+    "static/js/main.33044812.chunk.js"
   ]
 }
