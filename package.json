@@ -2,7 +2,7 @@
 	"name": "personal-site",
 	"version": "0.1.0",
 	"private": false,
-	"homepage": "www.faisalbin.com",
+	"homepage": "http://faisalbinahmed.github.io/personal-site",
 	"dependencies": {
 		"gh-pages": "^2.2.0",
 		"gitignore": "^0.6.0",
