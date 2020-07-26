@@ -44,6 +44,7 @@ const AppContainer = (props) => {
 		backgroundColor: theme === 'light' ? '#F7F7F7' : '#1f1f1f',
 		color: '#c9d1d3',
 		height: '100vh',
+		overflow: 'auto',
 	};
 	//* MENU CONTAINER
 	let menustyles = {
@@ -129,7 +130,13 @@ const AppContainer = (props) => {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route exact path="/about" component={About} />
-						<Route exact path="/new" component={NewHome} />
+						<Route
+							exact
+							path="/new"
+							component={() => (
+								<NewHome device={device} orient={orient} />
+							)}
+						/>
 
 						<Route component={BadLink} />
 					</Switch>

@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import Card from './Card';
+import Dialog from './Dialog';
 
 const NewHome = (props) => {
+	const { device, orient } = props;
+
+	const [dialogOpen, setDialogOpen] = useState(false);
+
+	const columnString = orient === 'portrait' ? 'auto' : 'auto auto';
+
 	const GridContainer = styled.div`
 		display: grid;
-		grid-template-columns: auto auto;
+		grid-template-columns: ${columnString};
 		padding: 30px;
 	`;
 
@@ -14,7 +21,16 @@ const NewHome = (props) => {
 		padding: 10px;
 	`;
 
-	const shortAbout = 'Hi, I am Faisal and welcome to my website';
+	const shortAbout =
+		'Hi, I am Faisal and welcome to my website. I am a Munich based...';
+
+	const cardClicker = () => {
+		setDialogOpen(true);
+	};
+
+	const closeDialog = (e) => {
+		setDialogOpen(false);
+	};
 
 	return (
 		<React.Fragment>
@@ -24,23 +40,32 @@ const NewHome = (props) => {
 						title="❝ About Me"
 						color="#82C65F"
 						desc={shortAbout}
+						clicker={cardClicker}
 					/>
 				</GridItem>
 				<GridItem>
 					<Card
-						title="Experience"
+						title="＊ Experience"
 						color="#E5DB49"
 						desc={shortAbout}
 					/>
 				</GridItem>
 				<GridItem>
-					<Card title="Writings" color="#5D8EC9" desc={shortAbout} />
+					<Card
+						title="✎ Writings"
+						color="#5D8EC9"
+						desc={shortAbout}
+					/>
 				</GridItem>
 				<GridItem>
-					<Card title="Projects" color="#D7473F" desc={shortAbout} />
+					<Card
+						title="❖ Projects"
+						color="#D7473F"
+						desc={shortAbout}
+					/>
 				</GridItem>
 			</GridContainer>
-			<p>Hello</p>
+			{dialogOpen && <Dialog title={shortAbout} close={closeDialog} />}
 		</React.Fragment>
 	);
 };

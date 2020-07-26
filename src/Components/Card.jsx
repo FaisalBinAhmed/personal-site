@@ -3,13 +3,14 @@ import styled from 'styled-components';
 import noise from '../Assets/noise.png';
 
 const Card = (props) => {
-	const { title, color, desc } = props;
+	const { title, color, desc, clicker } = props;
 
 	const StyledCard = styled.div`
 		height: 300px;
 		background-color: ${color};
 		border-radius: 5px;
 		background-url: ${noise};
+		max-width: 37vw;
 		&:hover {
 			filter: brightness(1.25);
 			cursor: pointer;
@@ -17,7 +18,7 @@ const Card = (props) => {
 	`;
 
 	const Title = styled.h1`
-		font-size: 60px;
+		font-size: 3vw;
 		margin-top: 0;
 		margin-bottom: 0;
 		margin-left: 20px;
@@ -38,13 +39,13 @@ const Card = (props) => {
 	const Description = styled.p`
 		color: black;
 		font-family: 'Roboto';
-		font-size: 30px;
+		font-size: 1.5vw;
 		/* max-width: 90em; */
 	`;
 
 	return (
 		<React.Fragment>
-			<StyledCard onClick={() => {}}>
+			<StyledCard onClick={clicker}>
 				<Title>{title}</Title>
 				<Divider />
 				<Description>{desc}</Description>
