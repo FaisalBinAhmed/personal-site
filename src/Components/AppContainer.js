@@ -56,7 +56,7 @@ const AppContainer = (props) => {
 	};
 	//* PAGE CONTAINER
 	let containerStyle = {
-		backgroundColor: theme === 'light' ? '#FFF' : '#121212',
+		backgroundColor: theme === 'light' ? '#fefefa' : '#121212',
 		color: theme === 'light' ? '#121212' : '#F7F7F7',
 		height: '100vh',
 		overflow: 'auto',
@@ -134,7 +134,11 @@ const AppContainer = (props) => {
 							exact
 							path="/new"
 							component={() => (
-								<NewHome device={device} orient={orient} />
+								<NewHome
+									device={device}
+									orient={orient}
+									theme={theme}
+								/>
 							)}
 						/>
 

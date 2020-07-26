@@ -1,7 +1,7 @@
 .App {
 	text-align: center;
-	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-		"Lucida Sans", Arial, sans-serif;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+		'Lucida Sans', Arial, sans-serif;
 }
 
 .App-logo {
@@ -25,4 +25,8 @@
 a {
 	text-decoration: none;
 	color: #5c6bc0;
+}
+html,
+body {
+	overscroll-behavior: none;
 }
