@@ -13,23 +13,22 @@ const ModalBackdrop = styled.div`
 	z-index: 9;
 `;
 const ModalTitle = styled.span`
-	font-size: 3vw;
+	font-size: calc(30px + 0.4vw);
 	margin-top: 0;
 	margin-bottom: 0;
 	margin-left: 20px;
 	color: ${(props) => (props.theme === 'light' ? 'black' : 'white')};
-	font-family: 'Roboto';
-	text-align: left;
+	font-family: 'Courier';
+	font-weight: 350;
 `;
 
 const ModalContent = styled.div`
 	background-color: ${(props) =>
 		props.theme === 'light' ? '#fefefa' : 'black'};
-	/* display: block; */
-	width: 60%;
+	width: 85vmin;
 	height: 90%;
 	margin: auto;
-	padding: 20px;
+	padding: calc(1px + 0.4vmin);
 	z-index: 20;
 	margin-top: 5%;
 	/* margin-bottom: 5%; */
@@ -41,14 +40,10 @@ const CloseButton = styled.button`
 	background-color: transparent;
 	border: none;
 	outline: none;
-	font-size: 3vw;
+	font-size: calc(30px + 0.4vw);
 	float: right;
-	/* border-radius: 100px; */
 	:hover {
-		text-shadow: 1px 1px 5px red, -1px -1px 5px red;
-		/* :before {
-			content: 'close';
-		} */
+		text-shadow: 1.5px 1.5px 5px red, -1.5px -1.5px 5px red;
 	}
 `;
 const Dialog = (props) => {

@@ -3,46 +3,55 @@ import styled from 'styled-components';
 import noise from '../Assets/noise.png';
 
 const StyledCard = styled.div`
-	height: 300px;
+	height: calc(280px + 0.4vh);
 	background-color: ${(props) => props.color};
 	border-radius: 5px;
 	box-shadow: 1px 1px 5px ${(props) => props.color},
 		-1px -1px 5px ${(props) => props.color};
 	background-url: ${noise};
-	max-width: 37vw;
+	cursor: pointer;
+	overflow: hidden;
+	/* text-overflow: ellipsis; */
 	&:hover {
 		filter: brightness(1.25);
-		cursor: pointer;
+		:after {
+			content: 'Click to learn more ➜';
+			color: black;
+			position: absolute;
+			right: 5px;
+			bottom: 5px;
+		}
 	}
 `;
 
 const Title = styled.h1`
-	font-size: 3vw;
+	font-size: calc(30px + 0.4vw);
 	margin-top: 0;
 	margin-bottom: 0;
-	margin-left: 20px;
+	margin-left: 1vw;
 	color: black;
-	font-family: 'Roboto';
+	font-family: 'Courier';
+	font-weight: 350;
 	text-align: left;
 `;
 
 const Divider = styled.hr`
-	/* width: 90%; */
 	background-color: black;
 	height: 2px;
 	border: 0;
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-left: 1vw;
+	margin-right: 1vw;
 `;
 
 const Description = styled.p`
 	color: black;
 	font-family: 'Courier';
-	font-size: 1.33vw;
+	font-size: calc(20px + 0.4vw);
 	text-align: left;
-	margin-left: 20px;
-	margin-right: 20px;
-	padding-top: 20px;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	padding-top: 1vw;
+	/* white-space: nowrap; */
 `;
 
 const Card = (props) => {
@@ -52,6 +61,7 @@ const Card = (props) => {
 		<React.Fragment>
 			<StyledCard onClick={clicker} color={color}>
 				<Title>{title}</Title>
+
 				<Divider />
 				<Description>{desc}</Description>
 			</StyledCard>

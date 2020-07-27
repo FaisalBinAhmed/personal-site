@@ -42,6 +42,7 @@ const AppContainer = (props) => {
 	let navstyles = {
 		display: 'block',
 		backgroundColor: theme === 'light' ? '#F7F7F7' : '#1f1f1f',
+		// backgroundColor: theme === 'light' ? '#C5CAE9' : '#3F51B5',
 		color: '#c9d1d3',
 		height: '100vh',
 		overflow: 'auto',

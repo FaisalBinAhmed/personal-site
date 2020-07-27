@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Card from './Card';
 import Dialog from './Dialog';
+import AboutMe from './Home/Home';
 
 const NewHome = (props) => {
 	const { device, orient, theme } = props;
@@ -10,12 +11,18 @@ const NewHome = (props) => {
 	const [dialogOpen, setDialogOpen] = useState(false);
 	const [index, setIndex] = useState(0);
 
-	const columnString = orient === 'portrait' ? 'auto' : 'auto auto';
+	const columnString = orient === 'portrait' ? '1fr' : '2fr 2fr';
 
 	const GridContainer = styled.div`
 		display: grid;
 		grid-template-columns: ${columnString};
-		padding: 30px;
+		padding: calc(10px + 0.8vmin);
+	`;
+	const GridContainerFull = styled.div`
+		display: grid;
+		grid-template-columns: 1fr;
+		padding: calc(10px + 0.8vmin);
+		padding-bottom: 0;
 	`;
 
 	const GridItem = styled.div`
@@ -24,28 +31,28 @@ const NewHome = (props) => {
 
 	const asset = [
 		{
-			title: '❝ About Me',
+			title: 'About Me',
 			desc:
-				"I'm a 25 years old software engineer based in Munich. I was born and raised in Dhaka, Bangladesh. I'm married to this beautiful woman named Preetha.",
-			color: '#82C65F',
+				"I'm a 25 years old software engineer based in Munich. I was born and raised in Dhaka, Bangladesh. I'm married to this beautiful woman named Preetha...",
+			color: '#a2de96',
 		},
 		{
-			title: '＊ Experience',
+			title: 'Experience',
 			desc:
 				'Hi, I am Faisal and welcome to my website. I am a Munich based...',
-			color: '#E5DB49',
+			color: '#fbd46d',
 		},
 		{
-			title: '✎ Writings',
+			title: 'Writings',
 			desc:
 				'Hi, I am Faisal and welcome to my website. I am a Munich based...',
-			color: '#5D8EC9',
+			color: '#64c4ed',
 		},
 		{
-			title: '❖ Projects',
+			title: 'Projects',
 			desc:
 				'Hi, I am Faisal and welcome to my website. I am a Munich based...',
-			color: '#D7473F',
+			color: '#ff677d',
 		},
 	];
 
@@ -60,6 +67,11 @@ const NewHome = (props) => {
 
 	return (
 		<React.Fragment>
+			<GridContainerFull>
+				<GridItem>
+					<AboutMe />
+				</GridItem>
+			</GridContainerFull>
 			<GridContainer>
 				{asset.map((item, index) => (
 					<GridItem key={index}>
