@@ -4,14 +4,32 @@ import styled from 'styled-components';
 import Card from './Card';
 import Dialog from './Dialog';
 import AboutMe from './Home/Home';
+import useTheme from './Hooks/useTheming';
+import nightModeIcon from '../Assets/nightmode.png';
+import lightModeIcon from '../Assets/lightmode.png';
+import faisal from '../Assets/faisal.jpeg';
+
+import { useMediaQuery } from 'react-responsive';
 
 const NewHome = (props) => {
-	const { device, orient, theme } = props;
+	// const { device, orient } = props;
 
 	const [dialogOpen, setDialogOpen] = useState(false);
 	const [index, setIndex] = useState(0);
+	const [theme, changeTheme] = useTheme();
+	const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
 
-	const columnString = orient === 'portrait' ? '1fr' : '2fr 2fr';
+	const columnString = isPortrait ? '1fr' : '2fr 2fr';
+
+	let iconText, iconSource;
+
+	if (theme === 'light') {
+		iconSource = nightModeIcon;
+		iconText = 'Switch to dark theme';
+	} else if (theme === 'dark') {
+		iconSource = lightModeIcon;
+		iconText = 'Switch to light theme';
+	}
 
 	const GridContainer = styled.div`
 		display: grid;
@@ -29,6 +47,53 @@ const NewHome = (props) => {
 		padding: 10px;
 	`;
 
+	const LandScapeLayout = styled.div`
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+	`;
+
+	const PortraitLayout = styled.div`
+		display: inline-grid;
+		overflow: auto;
+	`;
+
+	const Sidebar = styled.div`
+		display: block;
+		/* background-color: theme === 'light' ? '#F7F7F7' : '#1f1f1f', */
+		background-color: ${theme === 'light' ? '#C5CAE9' : '#3F51B5'};
+		color: #c9d1d3;
+		height: ${isPortrait ? '30vh' : '100vh'};
+		/* overflow: auto; */
+	`;
+
+	const ThemeSwitch = styled.img`
+		max-width: 24px;
+		margin-top: 5px;
+		margin-left: 5px;
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		opacity: 0.3;
+	`;
+
+	const StyledImage = styled.img`
+		width: calc(150px + 0.4vw);
+		/* max-width: 150rem; */
+		height: auto;
+		border-radius: 50%;
+		display: block;
+		margin: auto;
+		margin-top: calc(50px + 0.4vh);
+	`;
+
+	const Layout = isPortrait ? PortraitLayout : LandScapeLayout;
+
+	const MainContainer = styled.div`
+		background-color: ${theme === 'light' ? '#fefefa' : '#121212'};
+		color: ${theme === 'light' ? '#121212' : '#F7F7F7'};
+		height: 100%;
+		overflow: visible;
+	`;
 	const asset = [
 		{
 			title: 'About Me',
@@ -52,7 +117,7 @@ const NewHome = (props) => {
 			title: 'Projects',
 			desc:
 				'Hi, I am Faisal and welcome to my website. I am a Munich based...',
-			color: '#ff677d',
+			color: '#FF8A80',
 		},
 	];
 
@@ -67,31 +132,44 @@ const NewHome = (props) => {
 
 	return (
 		<React.Fragment>
-			<GridContainerFull>
-				<GridItem>
-					<AboutMe />
-				</GridItem>
-			</GridContainerFull>
-			<GridContainer>
-				{asset.map((item, index) => (
-					<GridItem key={index}>
-						<Card
-							title={item.title}
-							desc={item.desc}
-							color={item.color}
-							clicker={(e) => cardClicker(index)}
+			<Layout>
+				<Sidebar>
+					<ThemeSwitch
+						onClick={changeTheme}
+						src={iconSource}
+						title={iconText}
+						alt="theme switcher"
+					/>
+					<StyledImage src={faisal} alt="profile pic" />
+				</Sidebar>
+				<MainContainer>
+					<GridContainerFull>
+						<GridItem>
+							<AboutMe />
+						</GridItem>
+					</GridContainerFull>
+					<GridContainer>
+						{asset.map((item, index) => (
+							<GridItem key={index}>
+								<Card
+									title={item.title}
+									desc={item.desc}
+									color={item.color}
+									clicker={(e) => cardClicker(index)}
+								/>
+							</GridItem>
+						))}
+					</GridContainer>
+					{dialogOpen && (
+						<Dialog
+							title={asset[index].title}
+							close={closeDialog}
+							index={index}
+							theme={theme}
 						/>
-					</GridItem>
-				))}
-			</GridContainer>
-			{dialogOpen && (
-				<Dialog
-					title={asset[index].title}
-					close={closeDialog}
-					index={index}
-					theme={theme}
-				/>
-			)}
+					)}
+				</MainContainer>
+			</Layout>
 		</React.Fragment>
 	);
 };

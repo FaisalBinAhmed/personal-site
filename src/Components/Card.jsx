@@ -26,7 +26,7 @@ const StyledCard = styled.div`
 
 const Title = styled.h1`
 	font-size: calc(30px + 0.4vw);
-	margin-top: 0;
+	margin-top: 0.33vw;
 	margin-bottom: 0;
 	margin-left: 1vw;
 	color: black;

@@ -20,10 +20,10 @@ function AboutMe(props) {
 			<Typography fs={'3rem'} ff={'monospace'} ta={'left'}>
 				Hi, my name is Faisal. 👋
 			</Typography>
-			<Typography fs={'1.5rem'} ta={'justify'}>
+			<Typography fs={'1.5rem'} ta={'left'}>
 				Welcome to my personal website.
 			</Typography>
-			<Typography fs={'1.5rem'} ta={'justify'}>
+			<Typography fs={'1.5rem'} ta={'left'}>
 				I'm currently studying Master's of Informatics at Technical
 				University of Munich. I'm also working part-time as a front-end
 				developer at Joyn GmbH. If you want to know more about me, head
