@@ -6,8 +6,8 @@ const StyledCard = styled.div`
 	height: calc(280px + 0.4vh);
 	background-color: ${(props) => props.color};
 	border-radius: 5px;
-	box-shadow: 1px 1px 5px ${(props) => props.color},
-		-1px -1px 5px ${(props) => props.color};
+	box-shadow: 2px 2px 5px ${(props) => props.color},
+		-2px -2px 5px ${(props) => props.color};
 	background-url: ${noise};
 	cursor: pointer;
 	overflow: hidden;
@@ -46,7 +46,7 @@ const Divider = styled.hr`
 const Description = styled.p`
 	color: black;
 	font-family: 'Courier';
-	font-size: calc(20px + 0.4vw);
+	font-size: calc(18px + 0.4vw);
 	text-align: left;
 	margin-left: 1vw;
 	margin-right: 1vw;

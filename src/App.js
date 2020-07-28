@@ -1,10 +1,29 @@
 import React from 'react';
 // import logo from './logo.svg';
-import './App.scss';
 // import { useMediaQuery } from 'react-responsive';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import NewHome from './Components/NewHome';
 import BadLink from './Components/BadLink';
+import styled, { createGlobalStyle } from 'styled-components';
+
+const Main = styled.div`
+	text-align: center;
+	font-family: 'Courier', 'Trebuchet MS', 'Lucida Sans Unicode',
+		'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	html,
+	body {
+		overscroll-behavior: none;
+	}
+	a {
+		text-decoration: none;
+		color: #7986cb;
+	}
+	button {
+		border: none;
+		outline: none;
+		cursor: pointer;
+	}
+`;
 
 function App() {
 	// const isDesktopOrLaptop = useMediaQuery({
@@ -31,7 +50,7 @@ function App() {
 	// }
 
 	return (
-		<div className="App">
+		<Main>
 			<HashRouter>
 				<Switch>
 					{/* <Route exact path="/" component={Home} />
@@ -51,7 +70,7 @@ function App() {
 					<Route component={BadLink} />
 				</Switch>
 			</HashRouter>
-		</div>
+		</Main>
 	);
 }
 

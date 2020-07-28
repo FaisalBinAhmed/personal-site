@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 require('typeface-roboto');
+require('typeface-bebas-neue');
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

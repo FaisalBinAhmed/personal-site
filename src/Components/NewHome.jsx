@@ -7,9 +7,9 @@ import AboutMe from './Home/Home';
 import useTheme from './Hooks/useTheming';
 import nightModeIcon from '../Assets/nightmode.png';
 import lightModeIcon from '../Assets/lightmode.png';
-import faisal from '../Assets/faisal.jpeg';
 
 import { useMediaQuery } from 'react-responsive';
+import SideBarContent from './SideBarContent';
 
 const NewHome = (props) => {
 	// const { device, orient } = props;
@@ -59,10 +59,12 @@ const NewHome = (props) => {
 
 	const Sidebar = styled.div`
 		display: block;
-		/* background-color: theme === 'light' ? '#F7F7F7' : '#1f1f1f', */
-		background-color: ${theme === 'light' ? '#C5CAE9' : '#3F51B5'};
+		/* background-color: ${theme === 'light' ? '#F7F7F7' : '#1f1f1f'}; */
+		background-color: ${theme === 'light' ? '#353b48' : '#273c75'};
 		color: #c9d1d3;
-		height: ${isPortrait ? '30vh' : '100vh'};
+        height: ${isPortrait ? '10vh' : '100%'};
+        min-height: ${isPortrait ? '50px' : '100vh'};
+        /* transform: translateX(0px); */
 		/* overflow: auto; */
 	`;
 
@@ -72,18 +74,8 @@ const NewHome = (props) => {
 		margin-left: 5px;
 		position: absolute;
 		top: 5px;
-		left: 5px;
+		right: 5px;
 		opacity: 0.3;
-	`;
-
-	const StyledImage = styled.img`
-		width: calc(150px + 0.4vw);
-		/* max-width: 150rem; */
-		height: auto;
-		border-radius: 50%;
-		display: block;
-		margin: auto;
-		margin-top: calc(50px + 0.4vh);
 	`;
 
 	const Layout = isPortrait ? PortraitLayout : LandScapeLayout;
@@ -140,12 +132,12 @@ const NewHome = (props) => {
 						title={iconText}
 						alt="theme switcher"
 					/>
-					<StyledImage src={faisal} alt="profile pic" />
+					<SideBarContent />
 				</Sidebar>
 				<MainContainer>
 					<GridContainerFull>
 						<GridItem>
-							<AboutMe />
+							<AboutMe isPortrait={isPortrait} />
 						</GridItem>
 					</GridContainerFull>
 					<GridContainer>

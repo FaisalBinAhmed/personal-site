@@ -38,8 +38,6 @@ const CloseButton = styled.button`
 	display: block;
 	color: ${(props) => (props.theme === 'light' ? 'black' : 'white')};
 	background-color: transparent;
-	border: none;
-	outline: none;
 	font-size: calc(30px + 0.4vw);
 	float: right;
 	:hover {

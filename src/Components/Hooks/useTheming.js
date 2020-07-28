@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 export default () => {
-	const [theme, setTheme] = useState("light");
+	const [theme, setTheme] = useState('dark');
 
 	useEffect(() => {
-		const localTheme = window.localStorage.getItem("theme");
+		const localTheme = window.localStorage.getItem('theme');
 
 		if (localTheme) {
 			setTheme(localTheme);
@@ -12,12 +12,12 @@ export default () => {
 	}, []);
 
 	const changeTheme = () => {
-		if (theme === "dark") {
-			window.localStorage.setItem("theme", "light");
-			setTheme("light");
+		if (theme === 'dark') {
+			window.localStorage.setItem('theme', 'light');
+			setTheme('light');
 		} else {
-			window.localStorage.setItem("theme", "dark");
-			setTheme("dark");
+			window.localStorage.setItem('theme', 'dark');
+			setTheme('dark');
 		}
 	};
 
