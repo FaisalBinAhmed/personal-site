@@ -16,7 +16,8 @@ const ModalTitle = styled.span`
 	font-size: calc(30px + 0.4vw);
 	margin-top: 0;
 	margin-bottom: 0;
-	margin-left: 20px;
+	/* margin-left: 20px; */
+	text-align: center;
 	color: ${(props) => (props.theme === 'light' ? 'black' : 'white')};
 	font-family: 'Courier';
 	font-weight: 350;

@@ -60,7 +60,7 @@ const NewHome = (props) => {
 	const Sidebar = styled.div`
 		display: block;
 		/* background-color: ${theme === 'light' ? '#F7F7F7' : '#1f1f1f'}; */
-		background-color: ${theme === 'light' ? '#353b48' : '#273c75'};
+		background-color: ${theme === 'light' ? '#353b48' : '#2c2c54'};
 		color: #c9d1d3;
         height: ${isPortrait ? '10vh' : '100%'};
         min-height: ${isPortrait ? '50px' : '100vh'};
@@ -69,13 +69,15 @@ const NewHome = (props) => {
 	`;
 
 	const ThemeSwitch = styled.img`
-		max-width: 24px;
+		max-width: 30px;
 		margin-top: 5px;
 		margin-left: 5px;
 		position: absolute;
 		top: 5px;
 		right: 5px;
-		opacity: 0.3;
+		opacity: 0.5;
+		z-index: 999;
+		cursor: pointer;
 	`;
 
 	const Layout = isPortrait ? PortraitLayout : LandScapeLayout;
