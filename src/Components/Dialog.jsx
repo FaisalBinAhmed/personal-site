@@ -12,16 +12,6 @@ const ModalBackdrop = styled.div`
 	top: 0;
 	z-index: 9;
 `;
-const ModalTitle = styled.span`
-	font-size: calc(30px + 0.4vw);
-	margin-top: 0;
-	margin-bottom: 0;
-	/* margin-left: 20px; */
-	text-align: center;
-	color: ${(props) => (props.theme === 'light' ? 'black' : 'white')};
-	font-family: 'Courier';
-	font-weight: 350;
-`;
 
 const ModalContent = styled.div`
 	background-color: ${(props) =>
@@ -34,13 +24,27 @@ const ModalContent = styled.div`
 	margin-top: 5%;
 	/* margin-bottom: 5%; */
 	overflow: auto;
+	display: flex;
+	flex-direction: column;
+`;
+
+const Header = styled.div`
+	flex-direction: row;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+`;
+const ModalTitle = styled.p`
+	font-size: calc(30px + 0.4vw);
+	color: ${(props) => (props.theme === 'light' ? 'black' : 'white')};
+	font-family: 'Courier';
+	font-weight: 350;
+	text-align: justify;
 `;
 const CloseButton = styled.button`
-	display: block;
 	color: ${(props) => (props.theme === 'light' ? 'black' : 'white')};
 	background-color: transparent;
 	font-size: calc(30px + 0.4vw);
-	float: right;
 	:hover {
 		text-shadow: 1.5px 1.5px 5px red, -1.5px -1.5px 5px red;
 	}
@@ -51,17 +55,19 @@ const Dialog = (props) => {
 	console.log(index);
 	return (
 		<React.Fragment>
-			<ModalBackdrop onClick={close} className="dialogParent">
+			<ModalBackdrop onClick={close}>
 				<ModalContent
 					theme={theme}
 					onClick={(e) => {
 						e.stopPropagation();
-					}}
-					className="dialogChild">
-					<ModalTitle theme={theme}>{title}</ModalTitle>
-					<CloseButton theme={theme} onClick={close}>
-						<span>&times;</span>
-					</CloseButton>
+					}}>
+					<Header style={{}}>
+						<CloseButton />
+						<ModalTitle theme={theme}>{title}</ModalTitle>
+						<CloseButton theme={theme} onClick={close}>
+							<span>&times;</span>
+						</CloseButton>
+					</Header>
 					{index === 0 && <About />}
 				</ModalContent>
 			</ModalBackdrop>

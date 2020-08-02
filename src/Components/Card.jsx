@@ -11,7 +11,7 @@ const StyledCard = styled.div`
 	background-url: ${noise};
 	cursor: pointer;
 	overflow: hidden;
-	/* text-overflow: ellipsis; */
+	/* border: 1px solid black; */
 	&:hover {
 		filter: brightness(1.25);
 		:after {
