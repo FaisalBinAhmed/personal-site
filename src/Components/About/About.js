@@ -9,8 +9,8 @@ const mainstyles = {
 	marginTop: '5%',
 };
 const StyledImage = styled.img`
-	width: calc(200px + 0.4vw);
-	max-width: 150rem;
+	width: calc(150px + 0.4vw);
+	max-width: 105rem;
 	height: auto;
 	border-radius: 50%;
 	display: block;

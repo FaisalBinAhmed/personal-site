@@ -10,6 +10,7 @@ import lightModeIcon from '../Assets/lightmode.png';
 
 import { useMediaQuery } from 'react-responsive';
 import SideBarContent from './SideBarContent';
+import { FloatingButton } from './FloatingButton';
 
 const NewHome = (props) => {
 	// const { device, orient } = props;
@@ -49,7 +50,7 @@ const NewHome = (props) => {
 
 	const LandScapeLayout = styled.div`
 		display: grid;
-		grid-template-columns: 1fr 3fr;
+		grid-template-columns: 1fr 4fr;
 	`;
 
 	const PortraitLayout = styled.div`
@@ -59,13 +60,10 @@ const NewHome = (props) => {
 
 	const Sidebar = styled.div`
 		display: block;
-		/* background-color: ${theme === 'light' ? '#F7F7F7' : '#1f1f1f'}; */
 		background-color: ${theme === 'light' ? '#353b48' : '#2c2c54'};
 		color: #c9d1d3;
-        height: ${isPortrait ? '10vh' : '100%'};
-        min-height: ${isPortrait ? '50px' : '100vh'};
-        /* transform: translateX(0px); */
-		/* overflow: auto; */
+		height: ${isPortrait ? '10vh' : '100%'};
+		min-height: ${isPortrait ? '50px' : '100vh'};
 	`;
 
 	const ThemeSwitch = styled.img`
@@ -76,7 +74,7 @@ const NewHome = (props) => {
 		top: 5px;
 		right: 5px;
 		opacity: 0.5;
-		z-index: 999;
+		z-index: 10;
 		cursor: pointer;
 	`;
 
@@ -163,6 +161,7 @@ const NewHome = (props) => {
 						/>
 					)}
 				</MainContainer>
+				<FloatingButton />
 			</Layout>
 		</React.Fragment>
 	);

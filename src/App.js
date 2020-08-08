@@ -4,15 +4,16 @@ import React from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import NewHome from './Components/NewHome';
 import BadLink from './Components/BadLink';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 
 const Main = styled.div`
 	text-align: center;
 	font-family: 'Courier', 'Trebuchet MS', 'Lucida Sans Unicode',
 		'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	overscroll-behavior: none;
 	html,
 	body {
-		overscroll-behavior: none;
+		/* overscroll-behavior: none; */
 	}
 	a {
 		text-decoration: none;

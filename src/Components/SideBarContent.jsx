@@ -18,21 +18,6 @@ const StyledImage = styled.img`
 	display: inline-block;
 `;
 
-// const Social = styled.div`
-// 	margin-top: calc(50px + 0.4vh);
-// 	img {
-// 		max-width: 3.5rem;
-// 		margin-right: 12px;
-// 	}
-// `;
-
-// const Resume = styled.button`
-// 	background-color: transparent;
-// 	color: #fff;
-// 	font-size: 30px;
-// 	margin-top: 30px;
-// 	font-family: 'Courier';
-// `;
 const BigText = styled.h1`
 	font-family: 'Bebas Neue';
 	font-weight: bold;
@@ -63,13 +48,15 @@ const SideBarContent = (props) => {
 
 	return (
 		<React.Fragment>
-			{/* {isPortrait && <StyledImage src={faisal} alt="profile pic" />} */}
+			{/* {!isPortrait && <StyledImage src={faisal} alt="profile pic" />} */}
+			{/* {isPortrait && ( */}
 			<TextContainer isPortrait={isPortrait}>
 				<BigText>THIS</BigText>
 				<BigText> IS</BigText>
 				<BigText> FAISAL</BigText>
 				<BigText> AHMED</BigText>
 			</TextContainer>
+			{/* )} */}
 
 			{/* <Resume>Resume</Resume> */}
 		</React.Fragment>
