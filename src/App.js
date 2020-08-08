@@ -10,11 +10,6 @@ const Main = styled.div`
 	text-align: center;
 	font-family: 'Courier', 'Trebuchet MS', 'Lucida Sans Unicode',
 		'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	overscroll-behavior: none;
-	html,
-	body {
-		/* overscroll-behavior: none; */
-	}
 	a {
 		text-decoration: none;
 		color: #7986cb;
