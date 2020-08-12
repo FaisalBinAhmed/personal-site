@@ -44,7 +44,7 @@ const ModalContent = styled.div`
 const HeaderContainer = styled.div`
 	position: sticky;
 	top: 0px;
-	background-color: inherit;
+	background-color: ${(props) => props.color};
 	/* margin-top: 10px; */
 `;
 
@@ -59,7 +59,7 @@ const Header = styled.div`
 `;
 const ModalTitle = styled.span`
 	font-size: calc(30px + 0.4vw);
-	color: ${(props) => (props.theme === 'light' ? 'black' : 'white')};
+	color: black;
 	font-family: 'Courier';
 	font-weight: 350;
 	padding-left: 10px;
@@ -67,7 +67,7 @@ const ModalTitle = styled.span`
 	/* text-align: center; */
 `;
 const CloseButton = styled.div`
-	color: ${(props) => (props.theme === 'light' ? 'black' : 'white')};
+	color: black;
 	background-color: transparent;
 	font-size: calc(30px + 0.4vw);
 	float: right;
@@ -84,9 +84,8 @@ const Spacer = styled.div`
 	width: 33%;
 `;
 const Dialog = (props) => {
-	const { title, description, close, index, theme, isPortrait } = props;
+	const { title, children, close, theme, color } = props;
 
-	console.log(index);
 	return (
 		<React.Fragment>
 			<ModalBackdrop onClick={close} theme={theme}>
@@ -95,18 +94,16 @@ const Dialog = (props) => {
 					onClick={(e) => {
 						e.stopPropagation();
 					}}>
-					<HeaderContainer>
+					<HeaderContainer color={color}>
 						<Header>
 							<Spacer />
-							<ModalTitle theme={theme}>{title}</ModalTitle>
+							<ModalTitle>{title}</ModalTitle>
 							<Spacer>
-								<CloseButton theme={theme} onClick={close}>
-									✕
-								</CloseButton>
+								<CloseButton onClick={close}>✕</CloseButton>
 							</Spacer>
 						</Header>
 					</HeaderContainer>
-					{index === 0 && <About />}
+					{children}
 				</ModalContent>
 			</ModalBackdrop>
 		</React.Fragment>

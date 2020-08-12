@@ -9,7 +9,8 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Home = styled.div`
-	margin-top: ${(props) => (props.isPortrait ? '0px' : '3vh')};
+	margin-top: ${(props) => (props.isPortrait ? '0px' : '10vh')};
+	margin-bottom: ${(props) => (props.isPortrait ? '0px' : '15vh')};
 `;
 const Social = styled.div`
 	margin-top: calc(5px + 0.4vh);
@@ -46,7 +47,7 @@ function AboutMe(props) {
 				I'm currently studying Master's of Informatics at Technical
 				University of Munich. I'm also working part-time as a front-end
 				developer at Joyn GmbH. If you want to know more about me, head
-				over to my <Link to="/">"About Me"</Link> page.
+				over to my <Link to="/about">"About Me"</Link> page.
 			</Typography>
 			<Typography fs={'1.5rem'} ta={'justify'}>
 				Don't forget to follow me on social sites:

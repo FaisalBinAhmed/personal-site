@@ -4,9 +4,7 @@ import Typography from '../Typography';
 import styled from 'styled-components';
 
 const mainstyles = {
-	marginLeft: '5%',
-	marginRight: '5%',
-	marginTop: '5%',
+	margin: '5vw',
 };
 const StyledImage = styled.img`
 	width: calc(150px + 0.4vw);

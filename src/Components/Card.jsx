@@ -1,14 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import noise from '../Assets/noise.png';
 
 const StyledCard = styled.div`
 	height: calc(280px + 0.4vh);
 	background-color: ${(props) => props.color};
 	border-radius: 2px;
-	box-shadow: 2px 2px 5px ${(props) => props.color},
-		-2px -2px 5px ${(props) => props.color};
-	/* background-url: ${noise}; */
+	/* box-shadow: 2px 2px 5px ${(props) => props.color},
+		-2px -2px 5px ${(props) => props.color}; */
+	
 	cursor: pointer;
 	overflow: hidden;
 	/* border: 1px solid black; */

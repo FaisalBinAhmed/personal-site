@@ -7,16 +7,17 @@ import linkedin from '../Assets/linkedin.png';
 import medium from '../Assets/medium.png';
 
 import { useMediaQuery } from 'react-responsive';
+import { NavLink } from 'react-router-dom';
 
-const StyledImage = styled.img`
-	width: calc(50px + 0.4vw);
-	height: auto;
-	border-radius: 50%;
-	display: block;
-	margin: auto;
-	margin-top: calc(25px + 0.4vw);
-	display: inline-block;
-`;
+// const StyledImage = styled.img`
+// 	width: calc(50px + 0.4vw);
+// 	height: auto;
+// 	border-radius: 50%;
+// 	display: block;
+// 	margin: auto;
+// 	margin-top: calc(25px + 0.4vw);
+// 	display: inline-block;
+// `;
 
 const BigText = styled.h1`
 	font-family: 'Bebas Neue';
@@ -28,18 +29,28 @@ const BigText = styled.h1`
 `;
 
 const TextContainer = styled.div`
-	/* display: ${(props) => (props.isPortrait ? 'inline-block' : 'inherit')}; */
 	margin-right: ${(props) => (props.isPortrait ? '0' : 'calc(20px + 0.4vw)')};
-    /* margin-top: ${(props) =>
-		props.isPortrait ? '10px' : 'calc(300px + 0.4vw)'}; */
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+	position: ${(props) => (props.isPortrait ? 'relative' : 'sticky')};
+	top: 50%;
+	transform: translateY(-45%);
 	h1 {
-		display: ${(props) => (props.isPortrait ? 'inline-block' : 'inherit')};
+		display: ${(props) => (props.isPortrait ? 'inline-block' : 'block')};
 		padding: 3px;
 		font-size: ${(props) =>
 			props.isPortrait ? 'calc(20px + 3vw)' : 'calc(80px + 0.4vmin)'};
+	}
+`;
+
+const StyledLink = styled(NavLink)`
+	text-decoration: none;
+	color: #fff !important;
+
+	&:focus,
+	&:hover,
+	&:visited,
+	&:link,
+	&:active {
+		text-decoration: none;
 	}
 `;
 
@@ -48,17 +59,20 @@ const SideBarContent = (props) => {
 
 	return (
 		<React.Fragment>
-			{/* {!isPortrait && <StyledImage src={faisal} alt="profile pic" />} */}
-			{/* {isPortrait && ( */}
 			<TextContainer isPortrait={isPortrait}>
-				<BigText>THIS</BigText>
-				<BigText> IS</BigText>
-				<BigText> FAISAL</BigText>
-				<BigText> AHMED</BigText>
+				<BigText>
+					<StyledLink to="/">THIS</StyledLink>
+				</BigText>
+				<StyledLink to="/">
+					<BigText> IS</BigText>
+				</StyledLink>
+				<StyledLink to="/">
+					<BigText> FAISAL</BigText>
+				</StyledLink>
+				<StyledLink to="/">
+					<BigText> AHMED</BigText>
+				</StyledLink>
 			</TextContainer>
-			{/* )} */}
-
-			{/* <Resume>Resume</Resume> */}
 		</React.Fragment>
 	);
 };

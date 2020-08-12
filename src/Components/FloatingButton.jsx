@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 const StyledButton = styled.div`
 	width: calc(50px + 1vw);
 	height: calc(50px + 1vw);
-	background-color: #2c2c54;
+	background-color: #3c415e;
 	border-radius: 50%;
 	transition: all 0.1s ease-in-out;
 	font-size: calc(20px + 1vw);
@@ -20,6 +21,7 @@ const StyledButton = styled.div`
 	/* box-shadow: 2px 2px 10px #20203c, -2px -2px 10px #38386c; */
 	z-index: 11;
 	user-select: none;
+	-webkit-tap-highlight-color: transparent;
 	&:hover {
 		transform: scale(1.1);
 	}
@@ -55,7 +57,7 @@ const MenuContainer = styled.div`
 const MenuItem = styled.span`
 	color: white;
 	text-align: center;
-	background-color: #2c2c54;
+	background-color: #3c415e;
 	font-size: 30px;
 	/* margin-top: 10px; */
 	margin-bottom: 10px;
@@ -63,9 +65,12 @@ const MenuItem = styled.span`
 	cursor: pointer;
 	text-align: right;
 	border-radius: 2px;
+	a {
+		color: #fff !important;
+	}
 `;
 
-export const FloatingButton = ({ onClick, children }) => {
+export const FloatingButton = ({ onClick, children, changeTheme }) => {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [icon, setIcon] = useState('☰');
 
@@ -87,8 +92,13 @@ export const FloatingButton = ({ onClick, children }) => {
 			{menuOpen && (
 				<Menu>
 					<MenuContainer>
-						<MenuItem>Hello</MenuItem>
-						<MenuItem>My Resume</MenuItem>
+						<MenuItem>Send Email</MenuItem>
+						<MenuItem onClick={changeTheme}>Change Theme</MenuItem>
+						<MenuItem onClick={handleMenu}>
+							<NavLink exact to="/">
+								Go Home
+							</NavLink>
+						</MenuItem>
 					</MenuContainer>
 				</Menu>
 			)}
