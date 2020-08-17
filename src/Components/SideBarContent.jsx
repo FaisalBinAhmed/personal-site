@@ -37,7 +37,7 @@ const TextContainer = styled.div`
 		display: ${(props) => (props.isPortrait ? 'inline-block' : 'block')};
 		padding: 3px;
 		font-size: ${(props) =>
-			props.isPortrait ? 'calc(20px + 3vw)' : 'calc(4rem + 0.4vmin)'};
+			props.isPortrait ? 'calc(20px + 3vw)' : 'calc(4vw + 0.4vmin)'};
 	}
 `;
 

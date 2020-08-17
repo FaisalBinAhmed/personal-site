@@ -35,7 +35,7 @@ function AboutMe(props) {
 	const { isPortrait } = props;
 	return (
 		<Home isPortrait={isPortrait}>
-			{isPortrait && <StyledImage src={faisal} alt="profile pic" />}
+			{/* {isPortrait && <StyledImage src={faisal} alt="profile pic" />} */}
 			{/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
 			<Typography fs={'3rem'} ff={'monospace'} ta={'left'}>
 				Hello, there! 👋

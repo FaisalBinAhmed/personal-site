@@ -81,6 +81,14 @@ const Main = (props) => {
 		query: '(min-width: 768px) and (max-width: 1024px)',
 	});
 
+	const isTabletLandscape = useMediaQuery({
+		query:
+			'(min-width: 768px) and (max-width: 1024px) and (orientation: landscape)',
+	});
+	const isPhoneLandscape = useMediaQuery({
+		query: '(min-width: 481px) and (max-width: 961px)',
+	});
+
 	// const cardClicker = (index) => {
 	// 	setIndex(index);
 	// 	setDialogOpen(true);
@@ -94,7 +102,9 @@ const Main = (props) => {
 		? isTablet
 			? '1fr 1fr'
 			: '1fr'
-		: isTablet
+		: isPhoneLandscape
+		? '1fr 1fr'
+		: isTabletLandscape
 		? '1fr 1fr 1fr'
 		: '1fr 1fr 1fr 1fr';
 

@@ -14,6 +14,50 @@ import Main from './Main';
 import About from './About/About';
 import BadLink from './BadLink';
 
+const ThemeSwitch = styled.img`
+	max-width: 30px;
+	margin-top: 5px;
+	margin-left: 5px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	opacity: 0.5;
+	z-index: 10;
+	cursor: pointer;
+`;
+
+const LandScapeLayout = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+`;
+
+const PortraitLayout = styled.div`
+	display: inline-grid;
+	overflow: auto;
+`;
+
+const Sidebar = styled.div`
+	display: block;
+	background-color: ${(props) =>
+		props.theme === 'light' ? '#3c415e' : '#3c415e'};
+	color: #c9d1d3;
+	box-shadow: ${(props) =>
+		props.isPortrait
+			? 'inset 0px -5px 5px -5px #121212'
+			: 'inset -10px 0px 10px -10px #121212'};
+	height: ${(props) => (props.isPortrait ? '10vh' : '100%')};
+	min-height: ${(props) => (props.isPortrait ? '50px' : '100vh')};
+`;
+
+const MainContainer = styled.div`
+	background-color: ${(props) =>
+		props.theme === 'light' ? '#f7f7f7' : '#121212'};
+	color: ${(props) => (props.theme === 'light' ? '#121212' : '#F7F7F7')};
+	height: 100%;
+	min-height: 100vh;
+	overflow: visible;
+`;
+
 const NewHome = (props) => {
 	// const { device, orient } = props;
 
@@ -32,54 +76,17 @@ const NewHome = (props) => {
 		iconText = 'Switch to light theme';
 	}
 
-	const LandScapeLayout = styled.div`
-		display: grid;
-		grid-template-columns: 1fr 4fr;
-	`;
-
-	const PortraitLayout = styled.div`
-		display: inline-grid;
-		overflow: auto;
-	`;
-
-	const Sidebar = styled.div`
-		display: block;
-		background-color: ${theme === 'light' ? '#3c415e' : '#3c415e'};
-		color: #c9d1d3;
-		/* position: ${(props) => (props.isPortrait ? 'fixed' : 'inherit')}; */
-		height: ${isPortrait ? '10vh' : '100%'};
-		min-height: ${isPortrait ? '50px' : '100vh'};
-	`;
-
-	const ThemeSwitch = styled.img`
-		max-width: 30px;
-		margin-top: 5px;
-		margin-left: 5px;
-		position: absolute;
-		top: 5px;
-		right: 5px;
-		opacity: 0.5;
-		z-index: 10;
-		cursor: pointer;
-	`;
+	// const shadowColor = theme === 'light' ? '#fff' : '#000';
 
 	const Layout = isPortrait ? PortraitLayout : LandScapeLayout;
-
-	const MainContainer = styled.div`
-		background-color: ${theme === 'light' ? '#fefefa' : '#121212'};
-		color: ${theme === 'light' ? '#121212' : '#F7F7F7'};
-		height: 100%;
-		min-height: 100vh;
-		overflow: visible;
-	`;
 
 	return (
 		<HashRouter>
 			<Layout>
-				<Sidebar>
+				<Sidebar theme={theme} isPortrait={isPortrait}>
 					<SideBarContent />
 				</Sidebar>
-				<MainContainer>
+				<MainContainer theme={theme}>
 					<Switch>
 						<Route exact path="/" component={() => <Main />} />
 						<Route

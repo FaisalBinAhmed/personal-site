@@ -4,9 +4,11 @@ import styled from 'styled-components';
 const StyledCard = styled.div`
 	height: calc(100px + 2vh);
 	background-color: ${(props) => props.color};
-	border-radius: 10px;
+	border-radius: 5px;
 	cursor: pointer;
 	overflow: hidden;
+	/* box-shadow: 2px 2px 10px ${(props) => props.color},
+		-2px -2px 10px ${(props) => props.color}; */
 	&:hover {
 		filter: brightness(1.25);
 		:after {
