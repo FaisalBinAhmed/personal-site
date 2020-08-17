@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { HashRouter, Switch, Route, NavLink } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
 import useTheme from './Hooks/useTheming';
 import nightModeIcon from '../Assets/nightmode.png';
@@ -69,6 +69,7 @@ const NewHome = (props) => {
 		background-color: ${theme === 'light' ? '#fefefa' : '#121212'};
 		color: ${theme === 'light' ? '#121212' : '#F7F7F7'};
 		height: 100%;
+		min-height: 100vh;
 		overflow: visible;
 	`;
 

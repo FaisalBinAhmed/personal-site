@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { HashRouter, Switch, Route, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import MiniCard from './MiniCard';
-import Dialog from './Dialog';
+// import Dialog from './Dialog';
 import AboutMe from './Home/Home';
 import About from './About/About';
 import PDFViewer from './PDFViewer';
@@ -69,9 +69,6 @@ const GridContainerFull = styled.div`
 	grid-template-columns: 1fr;
 	padding: calc(10px + 0.8vmin);
 	padding-bottom: 0;
-	/* background-color: black;
-		margin: calc(10px + 0.8vmin);
-		border-radius: 10px; */
 `;
 
 const GridItem = styled.div`
@@ -79,10 +76,11 @@ const GridItem = styled.div`
 `;
 
 const Main = (props) => {
-	// const [dialogOpen, setDialogOpen] = useState(false);
-	// const [index, setIndex] = useState(0);
-	// const [theme, changeTheme] = useTheme();
 	const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
+	const isTablet = useMediaQuery({
+		query: '(min-width: 768px) and (max-width: 1024px)',
+	});
+
 	// const cardClicker = (index) => {
 	// 	setIndex(index);
 	// 	setDialogOpen(true);
@@ -92,7 +90,13 @@ const Main = (props) => {
 	// 	setDialogOpen(false);
 	// };
 
-	const columnString = isPortrait ? '1fr' : '1fr 1fr 1fr 1fr';
+	const columnString = isPortrait
+		? isTablet
+			? '1fr 1fr'
+			: '1fr'
+		: isTablet
+		? '1fr 1fr 1fr'
+		: '1fr 1fr 1fr 1fr';
 
 	return (
 		<>

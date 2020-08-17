@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import faisal from '../Assets/faisal.jpeg';
-import github from '../Assets/github.png';
-import twitter from '../Assets/twitter.png';
-import linkedin from '../Assets/linkedin.png';
-import medium from '../Assets/medium.png';
+// import faisal from '../Assets/faisal.jpeg';
+// import github from '../Assets/github.png';
+// import twitter from '../Assets/twitter.png';
+// import linkedin from '../Assets/linkedin.png';
+// import medium from '../Assets/medium.png';
 
 import { useMediaQuery } from 'react-responsive';
 import { NavLink } from 'react-router-dom';
@@ -22,7 +22,7 @@ import { NavLink } from 'react-router-dom';
 const BigText = styled.h1`
 	font-family: 'Bebas Neue';
 	font-weight: bold;
-	font-size: 80px;
+	/* font-size: 5rem !important; */
 	text-align: right;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -37,13 +37,14 @@ const TextContainer = styled.div`
 		display: ${(props) => (props.isPortrait ? 'inline-block' : 'block')};
 		padding: 3px;
 		font-size: ${(props) =>
-			props.isPortrait ? 'calc(20px + 3vw)' : 'calc(80px + 0.4vmin)'};
+			props.isPortrait ? 'calc(20px + 3vw)' : 'calc(4rem + 0.4vmin)'};
 	}
 `;
 
 const StyledLink = styled(NavLink)`
 	text-decoration: none;
 	color: #fff !important;
+	/* font-size: 10rem; */
 
 	&:focus,
 	&:hover,
@@ -60,9 +61,10 @@ const SideBarContent = (props) => {
 	return (
 		<React.Fragment>
 			<TextContainer isPortrait={isPortrait}>
-				<BigText>
-					<StyledLink to="/">THIS</StyledLink>
-				</BigText>
+				<StyledLink to="/">
+					<BigText>THIS</BigText>
+				</StyledLink>
+
 				<StyledLink to="/">
 					<BigText> IS</BigText>
 				</StyledLink>

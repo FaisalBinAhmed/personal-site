@@ -5,9 +5,6 @@ const StyledCard = styled.div`
 	height: calc(100px + 2vh);
 	background-color: ${(props) => props.color};
 	border-radius: 10px;
-	/* box-shadow: 2px 2px 5px ${(props) => props.color},
-		-2px -2px 5px ${(props) => props.color}; */
-	
 	cursor: pointer;
 	overflow: hidden;
 	&:hover {
@@ -16,7 +13,7 @@ const StyledCard = styled.div`
 			content: 'Click to learn more ➜';
 			color: black;
 			position: absolute;
-			right: 5px;
+			right: 1rem;
 			bottom: 5px;
 		}
 	}
@@ -46,10 +43,6 @@ const IconContainer = styled.div`
 const StyledImage = styled.img`
 	width: 40px;
 	height: 40px;
-	/* display: block; */
-	/* border-radius: 50%; */
-	/* float: right; */
-	/* position: relative; */
 	top: 50%;
 	transform: translateY(-50%);
 `;
@@ -57,7 +50,7 @@ const StyledImage = styled.img`
 const Description = styled.span`
 	color: black;
 	font-family: 'Courier';
-	font-size: 1.4em;
+	font-size: 1.25em;
 	text-align: left;
 	/* margin-left: 1rem;
 	margin-right: 1rem; */
@@ -68,9 +61,7 @@ const Description = styled.span`
 	max-width: 100%;
 `;
 
-const MiniCard = (props) => {
-	const { title, color, desc, clicker, icon } = props;
-
+const MiniCard = ({ title, color, desc, clicker, icon }) => {
 	return (
 		<React.Fragment>
 			<StyledCard onClick={clicker} color={color}>
