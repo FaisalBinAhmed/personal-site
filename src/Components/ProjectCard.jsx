@@ -13,16 +13,16 @@ const StyledCard = styled.div`
 	/* max-width: 40vw; */
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
 	/* font-size: calc(1vw + 1vh + 0.5vmin); */
 	/* font-size: 20px; */
-	font-size: 3vmax;
+	font-size: calc((0.4em + 0.5vmin) + (0.4em + 0.5vmax));
 	margin-top: 0.2em;
 	margin-bottom: 0;
 	/* margin-left: 0.5em; */
 	color: black;
 	font-family: 'Courier';
-	font-weight: 150;
+	/* font-weight: 500; */
 	text-align: left;
 `;
 
@@ -56,6 +56,7 @@ const Logo = styled.img`
 	/* margin-right: 1vw;
 	margin-top: 0.5vw;
 	margin-left: 0.5vw; */
+	margin-right: 0.5vw;
 	padding: 5px;
 `;
 
