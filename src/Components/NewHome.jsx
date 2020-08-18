@@ -13,6 +13,7 @@ import { FloatingButton } from './FloatingButton';
 import Main from './Main';
 import About from './About/About';
 import BadLink from './BadLink';
+import Projects from './Projects';
 
 const ThemeSwitch = styled.img`
 	max-width: 30px;
@@ -28,12 +29,14 @@ const ThemeSwitch = styled.img`
 
 const LandScapeLayout = styled.div`
 	display: grid;
+	width: 100vw;
 	grid-template-columns: 1fr 4fr;
 `;
 
 const PortraitLayout = styled.div`
 	display: inline-grid;
 	overflow: auto;
+	width: 100vw;
 `;
 
 const Sidebar = styled.div`
@@ -93,6 +96,11 @@ const NewHome = (props) => {
 							exact
 							path="/about"
 							component={() => <About />}
+						/>
+						<Route
+							exact
+							path="/projects"
+							component={() => <Projects />}
 						/>
 
 						<Route component={BadLink} />

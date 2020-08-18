@@ -4,7 +4,7 @@ import github from '../../Assets/github.png';
 import twitter from '../../Assets/twitter.png';
 import linkedin from '../../Assets/linkedin.png';
 import medium from '../../Assets/medium.png';
-import faisal from '../../Assets/faisal.jpeg';
+// import faisal from '../../Assets/faisal.jpeg';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -20,16 +20,16 @@ const Social = styled.div`
 		margin-right: 12px;
 	}
 `;
-const StyledImage = styled.img`
-	width: calc(50px + 8vw);
-	height: auto;
-	border-radius: 50%;
-	display: block;
-	margin: auto;
-	/* margin-top: calc(25px + 0.4vw); */
-	/* display: inline-block; */
-	/* float: left; */
-`;
+// const StyledImage = styled.img`
+// 	width: calc(50px + 8vw);
+// 	height: auto;
+// 	border-radius: 50%;
+// 	display: block;
+// 	margin: auto;
+// 	/* margin-top: calc(25px + 0.4vw); */
+// 	/* display: inline-block; */
+// 	/* float: left; */
+// `;
 
 function AboutMe(props) {
 	const { isPortrait } = props;

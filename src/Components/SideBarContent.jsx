@@ -39,11 +39,14 @@ const TextContainer = styled.div`
 		font-size: ${(props) =>
 			props.isPortrait ? 'calc(20px + 3vw)' : 'calc(4vw + 0.4vmin)'};
 	}
+	:hover {
+		text-decoration: underline;
+	}
 `;
 
 const StyledLink = styled(NavLink)`
 	text-decoration: none;
-	color: #fff !important;
+	color: #f7f7f7 !important;
 	/* font-size: 10rem; */
 
 	&:focus,

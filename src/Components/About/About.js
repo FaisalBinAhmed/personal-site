@@ -2,6 +2,7 @@ import React from 'react';
 import faisal from '../../Assets/faisal.jpeg';
 import Typography from '../Typography';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 const mainstyles = {
 	margin: '5vw',
@@ -15,9 +16,19 @@ const StyledImage = styled.img`
 	margin: auto;
 `;
 
+// const StyledLink = styled(NavLink)`
+
+// `;
+
 const About = (props) => {
 	return (
 		<div style={mainstyles}>
+			<NavLink exact to="/">
+				<Typography fs={'1.5rem'} ta={'left'}>
+					{' '}
+					← Go back to Home
+				</Typography>
+			</NavLink>
 			<StyledImage src={faisal} alt="profile pic" />
 			<Typography fs={'1.5rem'} ta={'left'}>
 				I'm a 25 years old software engineer based in Munich. I was born

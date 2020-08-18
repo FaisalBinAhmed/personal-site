@@ -6,6 +6,7 @@ import MiniCard from './MiniCard';
 // import Dialog from './Dialog';
 import AboutMe from './Home/Home';
 import About from './About/About';
+import Projects from './Projects';
 import PDFViewer from './PDFViewer';
 
 import personIcon from '../Assets/person.svg';
@@ -33,22 +34,30 @@ const asset = [
 		Component: <About />,
 		route: '/about',
 	},
-	{
-		title: 'Writings',
-		desc: "I'm a 25 years old engineer from ... ",
-		color: '#64c4ed',
-		icon: studyIcon,
-		Component: <About />,
-		route: '/about',
-	},
+	// {
+	// 	title: 'Writings',
+	// 	desc: "I'm a 25 years old engineer from ... ",
+	// 	color: '#64c4ed',
+	// 	icon: studyIcon,
+	// 	Component: <About />,
+	// 	route: '/about',
+	// },
 	{
 		title: 'Projects',
 		desc: "I'm a 25 years old engineer from ... ",
 		color: '#FF8A80',
 		icon: gearIcon,
-		Component: <About />,
-		route: '/about',
+		Component: <Projects />,
+		route: '/projects',
 	},
+	// {
+	// 	title: 'Contact',
+	// 	// desc: "I'm a 25 years old engineer from ... ",
+	// 	color: '#64c4ed',
+	// 	icon: studyIcon,
+	// 	Component: <About />,
+	// 	route: '/about',
+	// },
 	{
 		title: 'Resume',
 		color: '#e1ccec',
