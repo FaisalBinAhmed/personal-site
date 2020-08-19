@@ -5,68 +5,9 @@ import { NavLink } from 'react-router-dom';
 import MiniCard from './MiniCard';
 // import Dialog from './Dialog';
 import AboutMe from './Home/Home';
-import About from './About/About';
-import Projects from './Projects';
-import PDFViewer from './PDFViewer';
-
-import personIcon from '../Assets/person.svg';
-import gearIcon from '../Assets/gear.svg';
-import portfolioIcon from '../Assets/portfolio.svg';
-import studyIcon from '../Assets/study.svg';
-import pdfIcon from '../Assets/pdf.svg';
 
 import { useMediaQuery } from 'react-responsive';
-
-const asset = [
-	{
-		title: 'About Me',
-		desc: "I'm a 25 years old engineer from Munich I'd like to... ",
-		color: '#a2de96',
-		icon: personIcon,
-		Component: <About />,
-		route: '/about',
-	},
-	{
-		title: 'Experience',
-		desc: "I'm a 25 years old engineer from ... ",
-		color: '#fbd46d',
-		icon: portfolioIcon,
-		Component: <About />,
-		route: '/about',
-	},
-	// {
-	// 	title: 'Writings',
-	// 	desc: "I'm a 25 years old engineer from ... ",
-	// 	color: '#64c4ed',
-	// 	icon: studyIcon,
-	// 	Component: <About />,
-	// 	route: '/about',
-	// },
-	{
-		title: 'Projects',
-		desc: "I'm a 25 years old engineer from ... ",
-		color: '#FF8A80',
-		icon: gearIcon,
-		Component: <Projects />,
-		route: '/projects',
-	},
-	// {
-	// 	title: 'Contact',
-	// 	// desc: "I'm a 25 years old engineer from ... ",
-	// 	color: '#64c4ed',
-	// 	icon: studyIcon,
-	// 	Component: <About />,
-	// 	route: '/about',
-	// },
-	{
-		title: 'Resume',
-		color: '#e1ccec',
-		desc: 'Download ➝ ',
-		icon: pdfIcon,
-		Component: <PDFViewer />,
-		route: '/about',
-	},
-];
+import categories from '../Assets/categories';
 
 const GridContainer = styled.div`
 	display: grid;
@@ -125,7 +66,7 @@ const Main = (props) => {
 				</GridItem>
 			</GridContainerFull>
 			<GridContainer columnString={columnString}>
-				{asset.map((item, index) => (
+				{categories.map((item, index) => (
 					<GridItem key={index}>
 						<NavLink exact to={item.route}>
 							<MiniCard

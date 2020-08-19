@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import faisal from '../../Assets/faisal.jpeg';
 import Typography from '../Typography';
 import styled from 'styled-components';
@@ -15,14 +15,21 @@ const StyledImage = styled.img`
 	display: block;
 	margin: auto;
 `;
-
+const Container = styled.div`
+	margin: 5vw;
+	padding-bottom: 5vh;
+`;
 // const StyledLink = styled(NavLink)`
 
 // `;
 
 const About = (props) => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return (
-		<div style={mainstyles}>
+		<Container>
 			<NavLink exact to="/">
 				<Typography fs={'1.5rem'} ta={'left'}>
 					{' '}
@@ -92,7 +99,7 @@ const About = (props) => {
 				</a>
 				profile.
 			</Typography>
-		</div>
+		</Container>
 	);
 };
 

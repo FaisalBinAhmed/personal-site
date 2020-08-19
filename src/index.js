@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-require('typeface-roboto');
+require('typeface-roboto-mono');
 require('typeface-bebas-neue');
 
 ReactDOM.render(<App />, document.getElementById('root'));

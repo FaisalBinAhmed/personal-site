@@ -1,13 +1,14 @@
 import React from 'react';
 
-const Typography = (props) => {
+const Typography = ({ ff, ta, children, ...otherProps }) => {
 	const styles = {
 		fontSize: 'calc(18px + 0.4vw)',
-		fontFamily: props.ff ? props.ff : 'Courier',
-		textAlign: props.ta,
+		fontFamily: 'Roboto Mono',
+		textAlign: ta,
+		...otherProps,
 	};
 
-	return <p style={styles}>{props.children}</p>;
+	return <p style={styles}>{children}</p>;
 };
 
 export default Typography;

@@ -5,13 +5,13 @@ import { NavLink } from 'react-router-dom';
 const StyledButton = styled.div`
 	width: calc(50px + 1vw);
 	height: calc(50px + 1vw);
-	background-color: #3c415e;
+	background-color: #232526;
 	border-radius: 50%;
 	transition: all 0.1s ease-in-out;
 	font-size: calc(20px + 1vw);
 	cursor: pointer;
 	color: white;
-
+	font-family: 'Bebas Neue';
 	text-align: center;
 
 	line-height: calc(50px + 1vw);
@@ -57,7 +57,8 @@ const MenuContainer = styled.div`
 const MenuItem = styled.span`
 	color: white;
 	text-align: center;
-	background-color: #3c415e;
+	background-color: #232526;
+	border-bottom: 1px solid #f7f7f7;
 	font-size: 30px;
 	/* margin-top: 10px; */
 	margin-bottom: 10px;

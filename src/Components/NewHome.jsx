@@ -14,6 +14,7 @@ import Main from './Main';
 import About from './About/About';
 import BadLink from './BadLink';
 import Projects from './Projects';
+import Projectview from './Projectview';
 
 const ThemeSwitch = styled.img`
 	max-width: 30px;
@@ -41,9 +42,13 @@ const PortraitLayout = styled.div`
 
 const Sidebar = styled.div`
 	display: block;
-	background-color: ${(props) =>
-		props.theme === 'light' ? '#3c415e' : '#3c415e'};
-	color: #c9d1d3;
+	/* background-color: ${(props) =>
+		props.theme === 'light' ? '#3c415e' : '#3c415e'}; */
+		background-color: #232526; 
+/* background: -webkit-linear-gradient(to right, #414345, #232526);  
+background: linear-gradient(to right, #414345, #232526); */
+
+	/* color: #c9d1d3; */
 	box-shadow: ${(props) =>
 		props.isPortrait
 			? 'inset 0px -5px 5px -5px #121212'
@@ -79,8 +84,6 @@ const NewHome = (props) => {
 		iconText = 'Switch to light theme';
 	}
 
-	// const shadowColor = theme === 'light' ? '#fff' : '#000';
-
 	const Layout = isPortrait ? PortraitLayout : LandScapeLayout;
 
 	return (
@@ -91,16 +94,13 @@ const NewHome = (props) => {
 				</Sidebar>
 				<MainContainer theme={theme}>
 					<Switch>
-						<Route exact path="/" component={() => <Main />} />
+						<Route exact path="/" component={Main} />
+						<Route exact path="/about" component={About} />
+						<Route exact path="/projects" component={Projects} />
 						<Route
 							exact
-							path="/about"
-							component={() => <About />}
-						/>
-						<Route
-							exact
-							path="/projects"
-							component={() => <Projects />}
+							path="/project/:title/:index"
+							component={Projectview}
 						/>
 
 						<Route component={BadLink} />

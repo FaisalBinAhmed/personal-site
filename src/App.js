@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const Main = styled.div`
 	text-align: center;
-	font-family: 'Courier', 'Trebuchet MS', 'Lucida Sans Unicode',
+	font-family: 'Roboto Mono', 'Trebuchet MS', 'Lucida Sans Unicode',
 		'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	a {
 		text-decoration: none;

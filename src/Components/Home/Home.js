@@ -1,5 +1,5 @@
 import React from 'react';
-import Typography from '../Typography';
+// import Typography from '../Typography';
 import github from '../../Assets/github.png';
 import twitter from '../../Assets/twitter.png';
 import linkedin from '../../Assets/linkedin.png';
@@ -16,20 +16,21 @@ const Social = styled.div`
 	margin-top: calc(5px + 0.4vh);
 	float: left;
 	img {
+		filter: grayscale(100%);
 		max-width: 2.5rem;
-		margin-right: 12px;
+		margin-right: 1em;
+		&:hover {
+			filter: none;
+		}
 	}
 `;
-// const StyledImage = styled.img`
-// 	width: calc(50px + 8vw);
-// 	height: auto;
-// 	border-radius: 50%;
-// 	display: block;
-// 	margin: auto;
-// 	/* margin-top: calc(25px + 0.4vw); */
-// 	/* display: inline-block; */
-// 	/* float: left; */
-// `;
+
+const Typography = styled.p`
+	font-size: calc(15px + 0.4vmax);
+	text-align: left;
+	/* line-height: 1.3; */
+	user-select: none;
+`;
 
 function AboutMe(props) {
 	const { isPortrait } = props;
@@ -37,21 +38,15 @@ function AboutMe(props) {
 		<Home isPortrait={isPortrait}>
 			{/* {isPortrait && <StyledImage src={faisal} alt="profile pic" />} */}
 			{/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
-			<Typography fs={'3rem'} ff={'monospace'} ta={'left'}>
-				Hello, there! 👋
-			</Typography>
-			<Typography fs={'1.5rem'} ta={'left'}>
-				Welcome to my personal website.
-			</Typography>
-			<Typography fs={'1.5rem'} ta={'left'}>
+			<Typography>Hello, there! 👋</Typography>
+			<Typography>Welcome to my personal website.</Typography>
+			<Typography>
 				I'm currently studying Master's of Informatics at Technical
 				University of Munich. I'm also working part-time as a front-end
 				developer at Joyn GmbH. If you want to know more about me, head
 				over to my <Link to="/about">"About Me"</Link> page.
 			</Typography>
-			<Typography fs={'1.5rem'} ta={'justify'}>
-				Don't forget to follow me on social sites:
-			</Typography>
+			<Typography>Don't forget to follow me on social sites:</Typography>
 			<Social>
 				<a href="https://twitter.com/FaisalBAhmed" target="_blank">
 					<img src={twitter} title="Twitter" />

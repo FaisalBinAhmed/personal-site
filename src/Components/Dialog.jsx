@@ -60,7 +60,7 @@ const Header = styled.div`
 const ModalTitle = styled.span`
 	font-size: calc(30px + 0.4vw);
 	color: black;
-	font-family: 'Courier';
+	font-family: 'Roboto Mono';
 	font-weight: 350;
 	padding-left: 10px;
 	min-width: 200px;

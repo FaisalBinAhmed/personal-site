@@ -21,7 +21,7 @@ import { NavLink } from 'react-router-dom';
 
 const BigText = styled.h1`
 	font-family: 'Bebas Neue';
-	font-weight: bold;
+	/* font-weight: bold; */
 	/* font-size: 5rem !important; */
 	text-align: right;
 	margin-top: 0;
@@ -40,7 +40,12 @@ const TextContainer = styled.div`
 			props.isPortrait ? 'calc(20px + 3vw)' : 'calc(4vw + 0.4vmin)'};
 	}
 	:hover {
-		text-decoration: underline;
+		/* text-decoration: underline; */
+
+		h1 {
+			color: #1273eb;
+			/* border-bottom: 2px solid #f7f7f7; */
+		}
 	}
 `;
 
@@ -62,23 +67,21 @@ const SideBarContent = (props) => {
 	const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
 
 	return (
-		<React.Fragment>
-			<TextContainer isPortrait={isPortrait}>
-				<StyledLink to="/">
-					<BigText>THIS</BigText>
-				</StyledLink>
+		<TextContainer isPortrait={isPortrait}>
+			{/* <StyledLink to="/">
+				<BigText>THIS</BigText>
+			</StyledLink>
 
-				<StyledLink to="/">
-					<BigText> IS</BigText>
-				</StyledLink>
-				<StyledLink to="/">
-					<BigText> FAISAL</BigText>
-				</StyledLink>
-				<StyledLink to="/">
-					<BigText> AHMED</BigText>
-				</StyledLink>
-			</TextContainer>
-		</React.Fragment>
+			<StyledLink to="/">
+				<BigText> IS</BigText>
+			</StyledLink> */}
+			<StyledLink to="/">
+				<BigText> FAISAL</BigText>
+			</StyledLink>
+			<StyledLink to="/">
+				<BigText> AHMED</BigText>
+			</StyledLink>
+		</TextContainer>
 	);
 };
 

@@ -1,63 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const StyledCard = styled.div`
-	/* max-width: 17em; */
-	/* height: 40vh; */
-	/* max-width: 60%; */
-	/* height: calc(400px + 2vh); */
-	background-color: ${(props) => props.color};
-	border-radius: 2px;
+const Container = styled.div`
+	display: grid;
+	/* border-radius: 2px; */
 	cursor: pointer;
 	overflow: hidden;
-	/* max-width: 40vw; */
+	outline: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	/* border-bottom: 2px solid white; */
+`;
+
+const StyledCard = styled.div`
+	opacity: 0.9;
+	grid-row: 1;
+	grid-column: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 `;
 
 const Title = styled.h2`
-	/* font-size: calc(1vw + 1vh + 0.5vmin); */
-	/* font-size: 20px; */
 	font-size: calc((0.4em + 0.5vmin) + (0.4em + 0.5vmax));
 	margin-top: 0.2em;
 	margin-bottom: 0;
-	/* margin-left: 0.5em; */
 	color: black;
-	font-family: 'Courier';
-	/* font-weight: 500; */
+	font-family: 'Roboto Mono';
 	text-align: left;
-`;
-
-const Divider = styled.hr`
-	background-color: black;
-	height: 2px;
-	border: 0;
-	margin-left: 1vw;
-	margin-right: 1vw;
 `;
 
 const Subtitle = styled.p`
 	color: black;
-	font-family: 'Courier';
+	font-family: 'Roboto Mono';
 	font-size: 1em;
 	text-align: left;
-	/* margin-left: 0.5em; */
-	/* margin-right: 1vw; */
-	/* padding-top: 1vw; */
-	/* white-space: nowrap; */
 `;
 
 const Thumbnail = styled.img`
 	width: 100%;
-	/* max-height: 20rem; */
-	object-fit: fill;
+	grid-row: 1;
+	grid-column: 1;
+	/* user-select: none; */
 `;
 const Logo = styled.img`
-	width: 3em;
-	/* height: 3rem; */
-	/* margin-right: 1vw;
-	margin-top: 0.5vw;
-	margin-left: 0.5vw; */
-	margin-right: 0.5vw;
-	padding: 5px;
+	width: 2.5em;
+	/* margin-right: 0.5vw; */
+	padding: 0.5em;
 `;
 
 const Header = styled.div`
@@ -66,10 +55,7 @@ const Header = styled.div`
 	align-items: flex-start;
 	justify-content: space-between;
 	align-content: stretch;
-	/* min-height: 2.5rem; */
-	/* padding-top: 5px; */
-	/* margin-bottom: 1rem; */
-	/* min-width: 90%; */
+	background-color: ${(props) => props.color};
 `;
 const Subheader = styled.div`
 	flex-direction: column;
@@ -79,35 +65,29 @@ const Subheader = styled.div`
 	align-content: stretch;
 	padding: 5px;
 	margin-left: 0.5em;
-	/* max-width: 80%;
-	overflow: hidden; */
+	/* user-select: none; */
 `;
-const ProjectCard = (props) => {
-	const {
-		title,
-		subtitle,
-		color,
-		description,
-		icon,
-		thumbnail,
-		link,
-		clicker,
-	} = props;
 
+const ProjectCard = ({ title, subtitle, color, icon, thumbnail, clicker }) => {
+	const [show, setShow] = useState(false);
 	return (
-		<React.Fragment>
-			<StyledCard onClick={clicker} color={color}>
-				<Thumbnail src={thumbnail} />
-				<Header>
+		<Container
+			onClick={clicker}
+			onTouchStart={() => setShow(true)}
+			onTouchEnd={() => setShow(false)}
+			onMouseEnter={() => setShow(true)}
+			onMouseLeave={() => setShow(false)}>
+			<Thumbnail src={thumbnail} />
+			<StyledCard>
+				<Header color={color}>
 					<Subheader>
 						<Title>{title}</Title>
-						<Subtitle>{subtitle}</Subtitle>
+						{show && <Subtitle>{subtitle}</Subtitle>}
 					</Subheader>
 					<Logo src={icon} />
 				</Header>
-				{/* <Description>{subtitle}</Description> */}
 			</StyledCard>
-		</React.Fragment>
+		</Container>
 	);
 };
 
