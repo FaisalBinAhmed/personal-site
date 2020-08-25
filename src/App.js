@@ -5,8 +5,7 @@ import styled from 'styled-components';
 
 const Main = styled.div`
 	text-align: center;
-	font-family: 'Roboto Mono', 'Trebuchet MS', 'Lucida Sans Unicode',
-		'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-family: 'Roboto Mono', 'Trebuchet MS', Arial, sans-serif;
 	a {
 		text-decoration: none;
 		color: #7986cb;

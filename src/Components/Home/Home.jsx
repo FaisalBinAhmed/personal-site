@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // import Typography from '../Typography';
 import github from '../../Assets/github.png';
 import twitter from '../../Assets/twitter.png';
@@ -6,7 +6,7 @@ import linkedin from '../../Assets/linkedin.png';
 import medium from '../../Assets/medium.png';
 // import faisal from '../../Assets/faisal.jpeg';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const Home = styled.div`
 	margin-top: ${(props) => (props.isPortrait ? '0px' : '10vh')};
@@ -32,13 +32,46 @@ const Typography = styled.p`
 	user-select: none;
 `;
 
+// const fontbulger = keyframes`
+//   0%, 100% {
+//     font-size: calc(15px + 0.4vmax);
+//   }
+//   50% {
+//     font-size: calc(35px + 0.4vmax);
+// }`;
+const colorChanger = keyframes` 
+  0%, 100% {
+    /* font-size: calc(15px + 0.4vmax); */
+  }
+  20% {
+    
+		content: 'hey';
+}`;
+
+const Header = styled(Typography)`
+	/* animation: ${colorChanger} 3s 1; */
+`;
+
 function AboutMe(props) {
 	const { isPortrait } = props;
+	const [index, setIndex] = useState(0);
+	const emojis = ['👋', '👋🏿', '👋🏾', '👋🏽', '👋🏼', '👋🏻', '👋'];
+
+	// useEffect(() => {
+	// 	setTimeout(() => {
+	// 		if (index < 6) {
+	// 			let i = index + 1;
+	// 			setIndex(i);
+	// 		}
+	// 	}, 250);
+	// 	console.log(index);
+	// }, [index]);
+
 	return (
 		<Home isPortrait={isPortrait}>
 			{/* {isPortrait && <StyledImage src={faisal} alt="profile pic" />} */}
 			{/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
-			<Typography>Hello, there! 👋</Typography>
+			<Header>Hello, there! {emojis[index]}</Header>
 			<Typography>Welcome to my personal website.</Typography>
 			<Typography>
 				I'm currently studying Master's of Informatics at Technical

@@ -13,8 +13,8 @@ const GoBack = styled.p`
 	text-align: left;
 	padding-left: 2vmin;
 `;
-const PageTitle = styled.p`
-	font-size: calc(22px + 0.4vw);
+const PageTitle = styled.h1`
+	font-size: calc(25px + 0.4vw);
 	text-align: left;
 	padding-left: 2vmin;
 `;

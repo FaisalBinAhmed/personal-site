@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 
 import useTheme from './Hooks/useTheming';
@@ -39,22 +39,26 @@ const PortraitLayout = styled.div`
 	overflow: auto;
 	width: 100vw;
 `;
-
+const anime = keyframes`
+	20% {
+    background-position: 100% 100%;
+  }
+`;
 const Sidebar = styled.div`
 	display: block;
-	/* background-color: ${(props) =>
-		props.theme === 'light' ? '#3c415e' : '#3c415e'}; */
-		background-color: #232526; 
-/* background: -webkit-linear-gradient(to right, #414345, #232526);  
-background: linear-gradient(to right, #414345, #232526); */
-
-	/* color: #c9d1d3; */
 	box-shadow: ${(props) =>
 		props.isPortrait
 			? 'inset 0px -5px 5px -5px #121212'
 			: 'inset -10px 0px 10px -10px #121212'};
 	height: ${(props) => (props.isPortrait ? '10vh' : '100%')};
 	min-height: ${(props) => (props.isPortrait ? '50px' : '100vh')};
+	background: repeating-linear-gradient(
+		-45deg,
+		#222831 0 10px,
+		#393e46 10px 20px
+	);
+	background-size: 200% 200%;
+	animation: ${anime} 1s linear 1;
 `;
 
 const MainContainer = styled.div`

@@ -43,7 +43,8 @@ const TextContainer = styled.div`
 		/* text-decoration: underline; */
 
 		h1 {
-			color: #1273eb;
+			/* color: #222831; */
+			text-shadow: 2px 2px #fbd46d;
 			/* border-bottom: 2px solid #f7f7f7; */
 		}
 	}

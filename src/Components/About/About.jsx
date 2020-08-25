@@ -1,12 +1,9 @@
 import React, { useEffect } from 'react';
 import faisal from '../../Assets/faisal.jpeg';
-import Typography from '../Typography';
+// import Typography from '../Typography';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-const mainstyles = {
-	margin: '5vw',
-};
 const StyledImage = styled.img`
 	width: calc(150px + 0.4vw);
 	max-width: 105rem;
@@ -14,14 +11,21 @@ const StyledImage = styled.img`
 	border-radius: 50%;
 	display: block;
 	margin: auto;
+	margin-bottom: 2em;
 `;
 const Container = styled.div`
 	margin: 5vw;
 	padding-bottom: 5vh;
 `;
-// const StyledLink = styled(NavLink)`
 
-// `;
+const Typography = styled.p`
+	font-size: calc(15px + 0.4vmax);
+	/* text-align: left; */
+	/* line-height: 1.3; */
+	/* user-select: none; */
+	text-align: left;
+	margin-bottom: 2em;
+`;
 
 const About = (props) => {
 	useEffect(() => {
@@ -31,10 +35,7 @@ const About = (props) => {
 	return (
 		<Container>
 			<NavLink exact to="/">
-				<Typography fs={'1.5rem'} ta={'left'}>
-					{' '}
-					← Go back to Home
-				</Typography>
+				<Typography> ← Go back to Home</Typography>
 			</NavLink>
 			<StyledImage src={faisal} alt="profile pic" />
 			<Typography fs={'1.5rem'} ta={'left'}>
@@ -42,7 +43,7 @@ const About = (props) => {
 				and raised in Dhaka, Bangladesh. I'm married to this beautiful
 				woman named Preetha.
 			</Typography>
-			<Typography fs={'1.5rem'} ta={'left'}>
+			<Typography>
 				🎓 I'm a full-time student at{' '}
 				<a href="https://tum.de" target="_blank">
 					Technical University of Munich
@@ -57,7 +58,7 @@ const About = (props) => {
 				. Since my childhood, I'd dreamt to study Computer Science - and
 				I was fortunate enough to achieve this dream.
 			</Typography>
-			<Typography fs={'1.5rem'} ta={'left'}>
+			<Typography>
 				👨‍💻 I'm currently working for a video straming company called{' '}
 				<a href="https://joyn.de" target="_blank">
 					Joyn
@@ -65,7 +66,7 @@ const About = (props) => {
 				as a part-time OTT developer. My main focus there are React,
 				Storybook, and JavaScript.
 			</Typography>
-			<Typography fs={'1.5rem'} ta={'left'}>
+			<Typography>
 				📝 When I'm not working or studying, I prefer to read books or
 				write articles. I started writing in 2013 as a freelance tech
 				writer. Soon I along with an Indian friend started a Windows
@@ -88,7 +89,7 @@ const About = (props) => {
 				</a>{' '}
 				blog. However, I don't write much nowadays.
 			</Typography>
-			<Typography fs={'1.5rem'} ta="left">
+			<Typography>
 				📚 I love reading - especially science related non-fiction
 				books. Some of my favorites are: The Code Book by Simon Singh,
 				The Gene by Siddhartha Mukherjee, Sapiens by Yuval Noah Harari,

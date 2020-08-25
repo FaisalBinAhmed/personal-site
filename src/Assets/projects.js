@@ -14,7 +14,7 @@ const asset = [
 		icon: diblocertLogo,
 		thumbnail: diblocert,
 		images: [],
-		link: '',
+		link: 'http://diblocert20.herokuapp.com',
 	},
 	{
 		title: 'Pryntable',
