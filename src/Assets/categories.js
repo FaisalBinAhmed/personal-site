@@ -27,7 +27,7 @@ const asset = [
 		color: '#fbd46d',
 		icon: studyIcon,
 
-		route: '/about',
+		route: '/papers',
 	},
 	{
 		title: 'Designs',
