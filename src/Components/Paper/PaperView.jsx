@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-import papers from '../Assets/papers';
+import papers from '../../Assets/papers';
 
 const GoBack = styled.p`
 	font-size: calc(18px + 0.4vw);

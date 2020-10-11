@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import ProjectCard from './ProjectCard';
 
-import projects from '../Assets/projects';
+import projects from '../../Assets/projects';
 
 import { useMediaQuery } from 'react-responsive';
 

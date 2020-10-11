@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-import projects from '../Assets/projects';
+import projects from '../../Assets/projects';
 import { useMediaQuery } from 'react-responsive';
 
 const GoBack = styled.p`
@@ -67,7 +67,7 @@ const Button = styled.button`
 	margin-bottom: 1vmin;
 `;
 
-const Projectview = (props) => {
+const Projectview = () => {
 	const { index } = useParams();
 
 	const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });

@@ -25,7 +25,7 @@ const GridItem = styled.div`
 	padding: 10px;
 `;
 
-const Main = (props) => {
+const Main = () => {
 	const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
 	const isTablet = useMediaQuery({
 		query: '(min-width: 768px) and (max-width: 1024px)',
@@ -38,15 +38,6 @@ const Main = (props) => {
 	const isPhoneLandscape = useMediaQuery({
 		query: '(min-width: 481px) and (max-width: 961px)',
 	});
-
-	// const cardClicker = (index) => {
-	// 	setIndex(index);
-	// 	setDialogOpen(true);
-	// };
-
-	// const closeDialog = (e) => {
-	// 	setDialogOpen(false);
-	// };
 
 	const columnString = isPortrait
 		? isTablet

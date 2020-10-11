@@ -13,10 +13,10 @@ import { FloatingButton } from './FloatingButton';
 import Main from './Main';
 import About from './About/About';
 import BadLink from './BadLink';
-import Projects from './Projects';
-import Projectview from './Projectview';
-import Papers from './Papers';
-import PaperView from './PaperView';
+import Projects from './Project/Projects';
+import Projectview from './Project/Projectview';
+import Papers from './Paper/Papers';
+import PaperView from './Paper/PaperView';
 
 const ThemeSwitch = styled.img`
 	max-width: 30px;

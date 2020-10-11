@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import PaperCard from './PaperCard';
 
-import papers from '../Assets/papers';
+import papers from '../../Assets/papers';
 
 import { useMediaQuery } from 'react-responsive';
 
