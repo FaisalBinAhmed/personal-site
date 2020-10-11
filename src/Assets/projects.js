@@ -1,7 +1,12 @@
 import diblocert from './diblocert.png';
-import mas from './mas.png';
+import maslogo from './maslogo.jpg';
+import metroappsauce from './metroappsauce.jpg';
+import mas1 from './mas1.png';
+import mas2 from './mas2.png';
 import diblocertLogo from './diblo_logo.png';
 import pryntableLogo from './pryntable_logo.png';
+import bridgeit from './bridgeit.png';
+import bridgeitlogo from './bridgeitlogo.png';
 
 const asset = [
 	{
@@ -47,8 +52,20 @@ const asset = [
 		description:
 			'DiBloCert 2.0 is a Blockchain based web app to manage and verify',
 		color: '#a2de96',
-		icon: pryntableLogo,
-		thumbnail: mas,
+		icon: maslogo,
+		thumbnail: metroappsauce,
+		images: [mas1, mas2],
+		link: '',
+	},
+	{
+		title: 'BridgeIT',
+		subtitle:
+			'An online platform where IT students helps senior with Technology',
+		description:
+			'An online platform where IT students helps senior with Technology',
+		color: '#a2de96',
+		icon: bridgeitlogo,
+		thumbnail: bridgeit,
 		images: [],
 		link: '',
 	},

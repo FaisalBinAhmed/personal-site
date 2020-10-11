@@ -74,7 +74,7 @@ const Projectview = () => {
 	const columnString = isPortrait ? '1fr' : '1fr 1fr';
 
 	if (!projects[index]) return <GoBack>Bad Link</GoBack>;
-	const { title, description, color, icon, thumbnail, link } = {
+	const { title, description, color, icon, thumbnail, link, images } = {
 		...projects[index],
 	};
 	return (
@@ -93,12 +93,11 @@ const Projectview = () => {
 				</Button>
 			</ButtonContainer>
 			<GridContainer columnString={columnString}>
-				<GridItem isPortrait={isPortrait}>
-					<Thumbnail src={thumbnail} />
-				</GridItem>
-				<GridItem>
-					<Thumbnail src={thumbnail} />
-				</GridItem>
+				{images.map((pic, index) => (
+					<GridItem>
+						<Thumbnail src={pic} />
+					</GridItem>
+				))}
 			</GridContainer>
 		</Container>
 	);
