@@ -63,7 +63,7 @@ const PaperView = () => {
 			<Description>{abstract}</Description>
 			<ButtonContainer>
 				<Button
-					onClick={() => window.open(link, '_blank')}
+					onClick={() => link && window.open(link, '_blank')}
 					color={color}>
 					View Paper
 				</Button>

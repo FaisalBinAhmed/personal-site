@@ -17,6 +17,7 @@ import Projects from './Project/Projects';
 import Projectview from './Project/Projectview';
 import Papers from './Paper/Papers';
 import PaperView from './Paper/PaperView';
+import Designs from './Design/Designs';
 
 const ThemeSwitch = styled.img`
 	max-width: 30px;
@@ -114,6 +115,7 @@ const NewHome = (props) => {
 							path="/paper/:title/:index"
 							component={PaperView}
 						/>
+						<Route exact path="/designs" component={Designs} />
 						<Route component={BadLink} />
 					</Switch>
 				</MainContainer>

@@ -11,26 +11,23 @@ const asset = [
 		link: 'https://ieeexplore.ieee.org/document/8288950',
 	},
 	{
-		title:
-			'The Issues and the Possible Solutions for Implementing Self-Driving Cars in Bangladesh',
+		title: `Website design and trust elements: A／B testing on a start-up's website`,
 		color: '#56b6e4',
-		type: 'Conference',
-		abstract:
-			'The main purpose of this study is to find the issues and suggest possible solutions regarding the implementation of Self-driving cars on Bangladeshi roads. A Self-driving car is fairly in its infancy today, but once implemented this can revolutionize our traffic management and transport system. This paper addresses some of the hurdles the technology might face in the country and offers a few measures that can be taken to overcome the downsides. ',
-		publisher: 'IEEE',
-		year: '2018',
-		link: 'https://ieeexplore.ieee.org/document/8288950',
+		type: 'In Review',
+		abstract: 'N/A',
+		publisher: 'N/A',
+		year: '2020',
+		link: '',
 	},
 	{
 		title:
-			'The Issues and the Possible Solutions for Implementing Self-Driving Cars in Bangladesh',
+			'Detection vs. Awareness - the Best Way to Fight Deepfake in the Perspective of Bangladesh',
 		color: '#c9f6e4',
-		type: 'Conference',
-		abstract:
-			'The main purpose of this study is to find the issues and suggest possible solutions regarding the implementation of Self-driving cars on Bangladeshi roads. A Self-driving car is fairly in its infancy today, but once implemented this can revolutionize our traffic management and transport system. This paper addresses some of the hurdles the technology might face in the country and offers a few measures that can be taken to overcome the downsides. ',
-		publisher: 'IEEE',
-		year: '2018',
-		link: 'https://ieeexplore.ieee.org/document/8288950',
+		type: 'In Review',
+		abstract: 'N/A',
+		publisher: 'N/A',
+		year: '2020',
+		link: '',
 	},
 ];
 

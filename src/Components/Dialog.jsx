@@ -1,11 +1,9 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import About from './About/About';
 
 const ModalBackdrop = styled.div`
 	width: 100%;
 	height: 100%;
-	/* background-color: rgba(255, 255, 255, 0.3); */
 	background-color: ${(props) =>
 		props.theme === 'light'
 			? 'rgba(0, 0, 0, 0.5)'
@@ -35,9 +33,7 @@ const ModalContent = styled.div`
 	z-index: 20;
 	margin-top: 2%;
 	border-radius: 5px;
-	overflow: auto;
-	/* display: flex;
-	flex-direction: column; */
+	overflow: scroll;
 	animation: ${slide} 0.2s;
 `;
 
@@ -45,7 +41,6 @@ const HeaderContainer = styled.div`
 	position: sticky;
 	top: 0px;
 	background-color: ${(props) => props.color};
-	/* margin-top: 10px; */
 `;
 
 const Header = styled.div`
@@ -64,7 +59,6 @@ const ModalTitle = styled.span`
 	font-weight: 350;
 	padding-left: 10px;
 	min-width: 200px;
-	/* text-align: center; */
 `;
 const CloseButton = styled.div`
 	color: black;
@@ -82,6 +76,13 @@ const CloseButton = styled.div`
 const Spacer = styled.div`
 	min-width: 40px;
 	width: 33%;
+`;
+const Thumbnail = styled.img`
+	width: 100%;
+	grid-row: 1;
+	grid-column: 1;
+	/* overflow: scroll; */
+	/* object-fit: fill; */
 `;
 const Dialog = (props) => {
 	const { title, children, close, theme, color } = props;
@@ -103,7 +104,7 @@ const Dialog = (props) => {
 							</Spacer>
 						</Header>
 					</HeaderContainer>
-					{children}
+					<Thumbnail src={children}/>
 				</ModalContent>
 			</ModalBackdrop>
 		</React.Fragment>

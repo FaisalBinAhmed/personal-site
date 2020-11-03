@@ -35,7 +35,7 @@ const asset = [
 		color: '#64c4ed',
 		icon: portfolioIcon,
 
-		route: '/about',
+		route: '/designs',
 	},
 	{
 		title: 'Resume',

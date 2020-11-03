@@ -33,6 +33,7 @@ const Title = styled.h2`
 	font-family: 'Roboto Mono';
 	text-align: justify;
 	padding: 10px;
+	min-height: 110px;
 `;
 
 const Subheader = styled.div`
