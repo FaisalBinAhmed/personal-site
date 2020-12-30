@@ -8,6 +8,7 @@ const Container = styled.div`
 	overflow: hidden;
 	outline: none;
 	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-tap-highlight-color: transparent;
 	/* border-bottom: 2px solid white; */
 `;
@@ -77,7 +78,7 @@ const ProjectCard = ({ title, subtitle, color, icon, thumbnail, clicker }) => {
 			onTouchEnd={() => setShow(false)}
 			onMouseEnter={() => setShow(true)}
 			onMouseLeave={() => setShow(false)}>
-			<Thumbnail src={thumbnail} />
+			{thumbnail && <Thumbnail src={thumbnail} />}
 			<StyledCard>
 				<Header color={color}>
 					<Subheader>

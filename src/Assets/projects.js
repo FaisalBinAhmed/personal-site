@@ -1,7 +1,8 @@
 import diblocert from './diblocert.png';
 import maslogo from './maslogo.jpg';
+// import faisal from './faisal.jpeg';
 
-import metroappsauce from './metroappsauce.jpg';
+import metroappsauce from './mas.png';
 import mas1 from './mas1.png';
 import mas2 from './mas2.png';
 
@@ -15,6 +16,19 @@ import ptbl2 from './ptbl2.png';
 
 import bridgeit from './bridgeit.png';
 import bridgeitlogo from './bridgeitlogo.png';
+
+import game1 from './game1.png';
+import game2 from './game2.png';
+
+import rss1 from './rss1.png';
+import rss2 from './rss2.png';
+import rss3 from './rss3.png';
+
+import deepl from './deepl.png';
+import deepl1 from './deepl1.jpg';
+import deepl2 from './deepl2.jpg';
+
+import ts1 from './ts1.jpg';
 
 const asset = [
 	{
@@ -40,16 +54,25 @@ const asset = [
 		link: '',
 	},
 	{
+		title: 'Depth Translator',
+		subtitle: 'A Browser extension for DeepL',
+		description: 'Depth Translator is an assistant extension for DeepL',
+		color: '#9E9E9E',
+		icon: deepl,
+		thumbnail: deepl1,
+		images: [deepl1, deepl2],
+		link:
+			'https://chrome.google.com/webstore/detail/depth-translator-for-deep/ngbebejjbijmijmhbbpkllcnjpgkjikl?',
+	},
+	{
 		title: 'This Site',
-		subtitle:
-			'DiBloCert 2.0 is a Blockchain based web app to manage and verify',
-		description:
-			'DiBloCert 2.0 is a Blockchain based web app to manage and verify',
-		color: '#fff',
-		icon: pryntableLogo,
-		thumbnail: diblocert,
-		images: [],
-		link: '',
+		subtitle: 'A React Based Responsive personal website',
+		description: 'Need I say more? Browse away!',
+		color: '#7986cb',
+		// icon: faisal,
+		thumbnail: ts1,
+		images: [ts1],
+		link: 'https://github.com/FaisalBinAhmed/personal-site',
 	},
 	{
 		title: 'MetroAppSauce',
@@ -67,10 +90,21 @@ const asset = [
 		subtitle: 'An OpenGL based arcade game for Windows',
 		description: 'An OpenGL based arcade game for Windows',
 		color: '#FFECB3',
-		icon: bridgeitlogo,
-		thumbnail: bridgeit,
-		images: [],
-		link: '',
+		// icon: bridgeitlogo,
+		thumbnail: game2,
+		images: [game1, game2],
+		link: 'https://github.com/FaisalBinAhmed/Rooftop-Adventure',
+	},
+	{
+		title: 'Newsification',
+		subtitle: 'An RSS news feed',
+		description:
+			'An online platform where people can subscribe to many RSS news feeds and read latest news.',
+		color: '#4E94CF',
+		// icon: bridgeitlogo,
+		thumbnail: rss2,
+		images: [rss1, rss2, rss3],
+		link: 'https://github.com/FaisalBinAhmed/RSSCurator',
 	},
 	{
 		title: 'BridgeIT',
@@ -82,7 +116,7 @@ const asset = [
 		icon: bridgeitlogo,
 		thumbnail: bridgeit,
 		images: [bridgeit],
-		link: '',
+		link: 'https://github.com/CLHB8/BridgeIT_FrontEnd',
 	},
 ];
 

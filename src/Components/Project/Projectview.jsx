@@ -86,11 +86,13 @@ const Projectview = () => {
 			{/* <Icon src={icon} /> */}
 			<Description>{description}</Description>
 			<ButtonContainer>
-				<Button
-					onClick={() => window.open(link, '_blank')}
-					color={color}>
-					View Project
-				</Button>
+				{link && (
+					<Button
+						onClick={() => window.open(link, '_blank')}
+						color={color}>
+						View Project
+					</Button>
+				)}
 			</ButtonContainer>
 			<GridContainer columnString={columnString}>
 				{images.map((pic, index) => (

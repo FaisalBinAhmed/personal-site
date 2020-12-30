@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 import DesignCard from './DesignCard';
-import Dialog from "./../Dialog";
+import Dialog from './../Dialog';
 
 import designs from '../../Assets/designs';
 
@@ -33,12 +33,11 @@ const GridItem = styled.div`
 	padding: 2vmin;
 `;
 
-const Designs = () => {
+const Designs = ({ theme }) => {
+	const [dialogOpen, setDialogOpen] = useState(false);
+	const [index, setIndex] = useState(0);
 
-    const [dialogOpen, setDialogOpen] = useState(false);
-    const [index, setIndex] = useState(0);
-
-    const cardClicker = (index) => {
+	const cardClicker = (index) => {
 		setIndex(index);
 		setDialogOpen(true);
 	};
@@ -46,7 +45,7 @@ const Designs = () => {
 	const closeDialog = (e) => {
 		setDialogOpen(false);
 	};
-    
+
 	const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
 	const isTablet = useMediaQuery({
 		query: '(min-width: 768px) and (max-width: 1024px)',
@@ -78,23 +77,21 @@ const Designs = () => {
 			<PageTitle> Designs</PageTitle>
 			<GridContainer columnString={columnString}>
 				{designs.map((design, index) => (
-					<GridItem key={index}
-                    onClick={() => cardClicker(index)}
-                    >
-							<DesignCard
-								subtitle={design.title}
-                                color={design.color}
-                                thumbnail={design.src}
-                                
-							/>
+					<GridItem key={index} onClick={() => cardClicker(index)}>
+						<DesignCard
+							subtitle={design.title}
+							color={design.color}
+							thumbnail={design.src}
+						/>
 					</GridItem>
 				))}
 			</GridContainer>
-            {dialogOpen && (
+			{dialogOpen && (
 				<Dialog
 					title={designs[index].title}
 					close={closeDialog}
 					index={index}
+					theme={theme}
 					color={designs[index].color}>
 					{designs[index].src}
 				</Dialog>

@@ -11,7 +11,7 @@ const asset = [
 		link: 'https://ieeexplore.ieee.org/document/8288950',
 	},
 	{
-		title: `Website design and trust elements: A／B testing on a start-up's website`,
+		title: `Website design and ... [REDACTED]`,
 		color: '#56b6e4',
 		type: 'In Review',
 		abstract: 'N/A',
@@ -20,8 +20,7 @@ const asset = [
 		link: '',
 	},
 	{
-		title:
-			'Detection vs. Awareness - the Best Way to Fight Deepfake in the Perspective of Bangladesh',
+		title: 'Detection vs. Awareness - the ... [REDACTED]',
 		color: '#c9f6e4',
 		type: 'In Review',
 		abstract: 'N/A',

@@ -6,7 +6,7 @@ import pocket from './pocket.png';
 
 const asset = [
 	{
-		title: 'MetroAppSauce logo',
+		title: 'MAS logo',
 		color: '#c9b6e4',
 		src: metroappsauce,
 	},
@@ -16,7 +16,7 @@ const asset = [
 		src: horqora,
 	},
 	{
-		title: 'Nokia Camera Phone history',
+		title: 'Nokia Camera history',
 		color: '#c9b6e4',
 		src: nokiacam,
 	},

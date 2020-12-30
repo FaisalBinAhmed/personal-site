@@ -115,7 +115,11 @@ const NewHome = (props) => {
 							path="/paper/:title/:index"
 							component={PaperView}
 						/>
-						<Route exact path="/designs" component={Designs} />
+						<Route
+							exact
+							path="/designs"
+							component={() => <Designs theme={theme} />}
+						/>
 						<Route component={BadLink} />
 					</Switch>
 				</MainContainer>

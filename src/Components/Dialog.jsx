@@ -5,9 +5,9 @@ const ModalBackdrop = styled.div`
 	width: 100%;
 	height: 100%;
 	background-color: ${(props) =>
-		props.theme === 'light'
+		props.theme !== 'light'
 			? 'rgba(0, 0, 0, 0.5)'
-			: 'rgba(255, 255, 255, 0.3)'};
+			: 'rgba(255, 255, 255, 0.9)'};
 	position: fixed;
 	/* overflow: auto; */
 	left: 0;
@@ -26,9 +26,11 @@ const slide = keyframes`
 
 const ModalContent = styled.div`
 	background-color: ${(props) =>
-		props.theme === 'light' ? '#fefefa' : 'black'};
+		props.theme === 'light'
+			? 'rgba(255,255,255,0.9)'
+			: 'rgba(0, 0, 0, 0.9)'};
 	width: 85vmin;
-	height: 95%;
+	max-height: 95%;
 	margin: auto;
 	z-index: 20;
 	margin-top: 2%;
@@ -104,7 +106,7 @@ const Dialog = (props) => {
 							</Spacer>
 						</Header>
 					</HeaderContainer>
-					<Thumbnail src={children}/>
+					<Thumbnail src={children} />
 				</ModalContent>
 			</ModalBackdrop>
 		</React.Fragment>
