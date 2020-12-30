@@ -48,7 +48,7 @@ const About = (props) => {
 				<a href="https://tum.de" target="_blank">
 					Technical University of Munich
 				</a>
-				. There, I've been parsuing my Master's in Informatics since
+				. There, I've been pursuing my Master's in Informatics since
 				summer 2018. My major subject areas are Software Engineering and
 				Distributed Systems. I finished my Bachelor's in Computer
 				Science & Engineering at{' '}
@@ -59,7 +59,7 @@ const About = (props) => {
 				I was fortunate enough to achieve this dream.
 			</Typography>
 			<Typography>
-				👨‍💻 I'm currently working for a video straming company called{' '}
+				👨‍💻 I'm currently working for a video streaming company called{' '}
 				<a href="https://joyn.de" target="_blank">
 					Joyn
 				</a>{' '}
