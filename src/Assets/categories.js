@@ -7,7 +7,7 @@ import pdfIcon from './pdf.svg';
 const asset = [
 	{
 		title: 'About Me',
-		desc: "I'm a 25 years old engineer from Munich I'd like to... ",
+		desc: "I'm a 26 years old engineer from Munich I'd like to... ",
 		color: '#a2de96',
 		icon: personIcon,
 
