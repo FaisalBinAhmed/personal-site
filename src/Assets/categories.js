@@ -40,10 +40,10 @@ const asset = [
 	{
 		title: 'Resume',
 		color: '#e1ccec',
-		desc: 'Download ➝ ',
+		desc: 'TBA ',
 		icon: pdfIcon,
 
-		route: '/about',
+		route: '/',
 	},
 ];
 export default asset;

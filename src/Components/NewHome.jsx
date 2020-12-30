@@ -18,6 +18,7 @@ import Projectview from './Project/Projectview';
 import Papers from './Paper/Papers';
 import PaperView from './Paper/PaperView';
 import Designs from './Design/Designs';
+import ScrollToTop from './helpers/scroll';
 
 const ThemeSwitch = styled.img`
 	max-width: 30px;
@@ -95,6 +96,7 @@ const NewHome = (props) => {
 
 	return (
 		<HashRouter>
+			<ScrollToTop />
 			<Layout>
 				<Sidebar theme={theme} isPortrait={isPortrait}>
 					<SideBarContent />

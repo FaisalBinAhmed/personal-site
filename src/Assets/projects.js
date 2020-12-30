@@ -100,7 +100,7 @@ const asset = [
 		subtitle: 'An RSS news feed',
 		description:
 			'An online platform where people can subscribe to many RSS news feeds and read latest news.',
-		color: '#4E94CF',
+		color: '#00695C',
 		// icon: bridgeitlogo,
 		thumbnail: rss2,
 		images: [rss1, rss2, rss3],
