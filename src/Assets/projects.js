@@ -36,17 +36,18 @@ const asset = [
 		subtitle:
 			'DiBloCert 2.0 is a Blockchain Based Web App to Manage and Verify Student credentials',
 		description:
-			'DiBloCert 2.0 is a Blockchain based web app to manage and verify',
+			'DiBloCert 2.0 is a Blockchain based web app to manage and verify student credetials using Digital Credetials Consortium infrastructure.',
 		color: '#c9b6e4',
 		icon: diblocertLogo,
 		thumbnail: diblocert,
 		images: [dbc1, dbc2],
-		link: 'http://diblocert20.herokuapp.com',
+		link: 'https://digitalcredentials.mit.edu/',
 	},
 	{
 		title: 'Pryntable',
 		subtitle: 'A Customer-to-customer 3D Printing Platform',
-		description: 'A Customer-to-customer 3D Printing Platform',
+		description:
+			'A Customer-to-customer 3D Printing Platform. Users can search for their desired 3D printed parts and order them with customized materials from select printer owners. 3D printer owners can manage their inventory and earn money in the process.',
 		color: '#a2de96',
 		icon: pryntableLogo,
 		thumbnail: ptbl1,
@@ -56,7 +57,7 @@ const asset = [
 	{
 		title: 'Depth Translator',
 		subtitle: 'A Browser extension for DeepL',
-		description: 'Depth Translator is an assistant extension for DeepL',
+		description: 'Depth Translator is an assistant extension for DeepL.',
 		color: '#9E9E9E',
 		icon: deepl,
 		thumbnail: deepl1,
@@ -78,17 +79,18 @@ const asset = [
 		title: 'MetroAppSauce',
 		subtitle: 'An App Review Website for Modern Windows Store Applications',
 		description:
-			'An App Review Website for Modern Windows Store Applications',
+			'An App Review Website for Modern Windows Store Applications (now discontinued). I also created the Wordpress theme for the site.',
 		color: '#20EBC2',
 		icon: maslogo,
 		thumbnail: metroappsauce,
 		images: [mas1, mas2],
-		link: '',
+		// link: '',
 	},
 	{
 		title: 'Rooftop Adventure',
 		subtitle: 'An OpenGL based arcade game for Windows',
-		description: 'An OpenGL based arcade game for Windows',
+		description:
+			'An OpenGL based arcade game for Windows that I created for my bachelor graphics project.',
 		color: '#FFECB3',
 		// icon: bridgeitlogo,
 		thumbnail: game2,
@@ -111,7 +113,7 @@ const asset = [
 		subtitle:
 			'An online platform where IT students helps senior with Technology',
 		description:
-			'An online platform where IT students helps senior with Technology',
+			'An online platform where IT students helps senior with Technology. Senior citizens can post for help and IT students can contact them/get recommended by system based on their profile.',
 		color: '#4E94CF',
 		icon: bridgeitlogo,
 		thumbnail: bridgeit,
