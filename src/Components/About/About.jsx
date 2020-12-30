@@ -39,7 +39,7 @@ const About = (props) => {
 			</NavLink>
 			<StyledImage src={faisal} alt="profile pic" />
 			<Typography fs={'1.5rem'} ta={'left'}>
-				I'm a 25 years old software engineer based in Munich. I was born
+				I'm a 26 years old software engineer based in Munich. I was born
 				and raised in Dhaka, Bangladesh. I'm married to this beautiful
 				woman named Preetha.
 			</Typography>
