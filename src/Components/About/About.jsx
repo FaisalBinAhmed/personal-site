@@ -40,8 +40,7 @@ const About = (props) => {
 			<StyledImage src={faisal} alt="profile pic" />
 			<Typography fs={'1.5rem'} ta={'left'}>
 				I'm a 26 years old software engineer based in Munich. I was born
-				and raised in Dhaka, Bangladesh. I'm married to this beautiful
-				woman named Preetha.
+				and raised in Dhaka, Bangladesh.
 			</Typography>
 			<Typography>
 				🎓 I'm a full-time student at{' '}
@@ -59,12 +58,20 @@ const About = (props) => {
 				I was fortunate enough to achieve this dream.
 			</Typography>
 			<Typography>
-				👨‍💻 I'm currently working for a video streaming company called{' '}
+				👨‍💻 I am currently working for{' '}
+				<a href="https://brainlab.com" target="_blank">
+					Brainlab
+				</a>{' '}
+				- a medical technology company based in Munich. I work full-time
+				in the GUI Engineering team.
+			</Typography>
+			<Typography>
+				👨‍💻 I previously worked for a video streaming company called{' '}
 				<a href="https://joyn.de" target="_blank">
 					Joyn
 				</a>{' '}
-				as a part-time OTT developer. My main focus there are React,
-				Storybook, and JavaScript.
+				as a part-time OTT developer. My main focus there were React,
+				Storybook, and JavaScript/TypeScript.
 			</Typography>
 			<Typography>
 				📝 When I'm not working or studying, I prefer to read books or
@@ -77,7 +84,7 @@ const About = (props) => {
 				In 2017, I continued my writing career with a technology
 				publication called Neowin. You can find all my written articles{' '}
 				<a
-					href="https://www.neowin.net/news/poster/faisal_ahmed"
+					href="https://www.neowin.net/news/poster/faisal-ahmed"
 					target="_blank">
 					here
 				</a>

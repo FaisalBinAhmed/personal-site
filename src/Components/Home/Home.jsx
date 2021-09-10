@@ -74,9 +74,9 @@ function AboutMe(props) {
 			<Header>Hello, there! {emojis[index]}</Header>
 			<Typography>Welcome to my personal website.</Typography>
 			<Typography>
-				I'm currently studying Master's of Informatics at Technical
-				University of Munich. I'm also working part-time as a front-end
-				developer at Joyn GmbH. If you want to know more about me, head
+				I've recently finished my Master's of Informatics at Technical
+				University of Munich. I'm working full-time as a software
+				engineer at Brainlab. If you want to know more about me, head
 				over to my <Link to="/about">"About Me"</Link> page.
 			</Typography>
 			<Typography>Don't forget to follow me on social sites:</Typography>

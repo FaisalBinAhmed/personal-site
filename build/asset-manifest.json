@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.42eb3fcd.chunk.css",
-    "main.js": "/static/js/main.298d9d20.chunk.js",
-    "main.js.map": "/static/js/main.298d9d20.chunk.js.map",
+    "main.css": "/static/css/main.98936c70.chunk.css",
+    "main.js": "/static/js/main.1321c49b.chunk.js",
+    "main.js.map": "/static/js/main.1321c49b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.59c279e7.js",
     "runtime-main.js.map": "/static/js/runtime-main.59c279e7.js.map",
     "static/css/2.99d36a8c.chunk.css": "/static/css/2.99d36a8c.chunk.css",
     "static/js/2.99d2f3c0.chunk.js": "/static/js/2.99d2f3c0.chunk.js",
     "static/js/2.99d2f3c0.chunk.js.map": "/static/js/2.99d2f3c0.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.6ced798b8b1d530f95bee91898ad9d0f.js": "/precache-manifest.6ced798b8b1d530f95bee91898ad9d0f.js",
+    "precache-manifest.ba33adfd9a5772dfc1543e649f72f479.js": "/precache-manifest.ba33adfd9a5772dfc1543e649f72f479.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.99d36a8c.chunk.css.map": "/static/css/2.99d36a8c.chunk.css.map",
-    "static/css/main.42eb3fcd.chunk.css.map": "/static/css/main.42eb3fcd.chunk.css.map",
+    "static/css/main.98936c70.chunk.css.map": "/static/css/main.98936c70.chunk.css.map",
     "static/media/index.css": "/static/media/roboto-mono-latin-700italic.b933305e.woff",
     "static/media/bridgeit.png": "/static/media/bridgeit.8706e88e.png",
     "static/media/bridgeitlogo.png": "/static/media/bridgeitlogo.6f7291f3.png",
@@ -24,7 +24,7 @@
     "static/media/faisal.jpeg": "/static/media/faisal.5b2a4d04.jpeg",
     "static/media/game1.png": "/static/media/game1.ab199626.png",
     "static/media/game2.png": "/static/media/game2.cbe5d971.png",
-    "static/media/gear.svg": "/static/media/gear.5bb581ef.svg",
+    "static/media/gear.svg": "/static/media/gear.70f8e4a6.svg",
     "static/media/horqora2.png": "/static/media/horqora2.95339df7.png",
     "static/media/mas.png": "/static/media/mas.c74bcdea.png",
     "static/media/mas1.png": "/static/media/mas1.d7402546.png",
@@ -47,7 +47,7 @@
     "static/js/runtime-main.59c279e7.js",
     "static/css/2.99d36a8c.chunk.css",
     "static/js/2.99d2f3c0.chunk.js",
-    "static/css/main.42eb3fcd.chunk.css",
-    "static/js/main.298d9d20.chunk.js"
+    "static/css/main.98936c70.chunk.css",
+    "static/js/main.1321c49b.chunk.js"
   ]
 }
